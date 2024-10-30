@@ -4,11 +4,19 @@
         <div class="row g-5">
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
+<<<<<<< Updated upstream
                     <h4 class="text-secondary mb-4">{{__('nigc.contact_info')}}</h4>
                     <a href=""><i class="fa fa-map-marker-alt me-2"></i> {{__('nigc.riyadh_alkhabra')}}</a>
                     <a href="mailto:support@nigcc.com"><i class="fas fa-envelope me-2"></i> support@nigcc.com</a>
                     <a href="tel:+966 50 789 5555"><i class="fas fa-phone me-2"></i> +966 50 789 5555</a>
                     <a href="tel:+966 53 096 6918" class="mb-3"><i class="fas fa-phone me-2"></i> +966 53 093 6918</a>
+=======
+                    <h4 class="text-secondary mb-4">Contact Info</h4>
+                    <a href=""><i class="fa fa-map-marker-alt me-2"></i> Riyadh Al Khabra</a>
+                    <a href=""><i class="fas fa-envelope me-2"></i> support@nigcc.com</a>
+                    <a href=""><i class="fas fa-phone me-2"></i> +966 530 936 918</a>
+                    <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +966 576 060 856</a>
+>>>>>>> Stashed changes
                     <div class="d-flex align-items-center">
                         <i class="fas fa-share fa-2x text-secondary me-2"></i>
                         <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
