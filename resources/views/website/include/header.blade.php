@@ -3,13 +3,8 @@
     <div class="row gx-0 align-items-center">
         <div class="col-lg-5 text-center text-lg-start mb-lg-0">
             <div class="d-flex">
-<<<<<<< Updated upstream
                 <a href="mailto:ibrahim.alkhudhair@nigcc.com" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>support@nigcc.com</a>
                 <a href="tel:0507895555" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>0507895555</a>
-=======
-                <a href="mailto:ibrahim.alkhudhair@nigcc.com" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>ibrahim.alkhudhair@nigcc.com</a>
-                <a href="tel:0507895555" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i> 0507895555</a>
->>>>>>> Stashed changes
             </div>
         </div>
         <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
