@@ -5,10 +5,10 @@
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="text-secondary mb-4">Contact Info</h4>
-                    <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                    <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                    <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                    <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                    <a href=""><i class="fa fa-map-marker-alt me-2"></i> Riyadh Al Khabra</a>
+                    <a href=""><i class="fas fa-envelope me-2"></i> support@nigcc.com</a>
+                    <a href=""><i class="fas fa-phone me-2"></i> +966 530 936 918</a>
+                    <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +966 576 060 856</a>
                     <div class="d-flex align-items-center">
                         <i class="fas fa-share fa-2x text-secondary me-2"></i>
                         <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -72,7 +72,7 @@
                 <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                 <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                 <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">A & F</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">AYKhost</a>
             </div>
         </div>
     </div>
