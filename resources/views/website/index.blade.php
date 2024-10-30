@@ -6,7 +6,7 @@
             <ul class="slides">
                 @foreach($slideshow as $slideshow)
                     <li>
-                        <img src="{{asset('storage/'.$slideshow->image)}}" alt="slider"  />
+                        <img src="{{asset('storage/'.$slideshow->image)}}" alt="slider" />
                     </li>
                 @endforeach
 
