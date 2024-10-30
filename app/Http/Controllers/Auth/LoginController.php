@@ -54,8 +54,8 @@ class LoginController extends Controller
         }
 
         elseif (preg_match("/^[a-z,.'-]+/" , $value)){
-            \request()->merge(['name' => $value]);
-            return 'name';
+            \request()->merge(['username' => $value]);
+            return 'username';
         }
 
 //        elseif (preg_match("/^(((\+|00)9677|0?7)[01378]\d{7}|((\+|00)967|0)[1-7]\d{6})$/" , $value)){
