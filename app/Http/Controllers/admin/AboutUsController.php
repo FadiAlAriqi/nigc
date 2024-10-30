@@ -15,7 +15,7 @@ class AboutUsController extends Controller
     public function index(AboutUs $aboutUs)
     {
         $mainContent = MainContent::latest()->first();
-        return view('admin.messages.aboutUs.index')->with([
+        return view('admin.aboutUs.index')->with([
             'aboutUs' => $aboutUs->all(),
             'mainContent' => $mainContent,
 
@@ -27,7 +27,7 @@ class AboutUsController extends Controller
      */
     public function create()
     {
-        return view('admin.messages.aboutUs.add');
+        return view('admin.aboutUs.add');
     }
 
     /**
@@ -84,7 +84,7 @@ class AboutUsController extends Controller
     public function show(string $id)
     {
         $aboutUs = AboutUs::whereId($id)->first();
-        return view('admin.messages.aboutUs.show')->with('aboutUs' , $aboutUs);
+        return view('admin.aboutUs.show')->with('aboutUs' , $aboutUs);
     }
 
     /**
@@ -93,7 +93,7 @@ class AboutUsController extends Controller
     public function edit(string $id)
     {
         $aboutUs = AboutUs::whereId($id)->first();
-        return view('admin.messages.aboutUs.edit')->with('aboutUs' , $aboutUs);
+        return view('admin.aboutUs.edit')->with('aboutUs' , $aboutUs);
     }
 
     /**
