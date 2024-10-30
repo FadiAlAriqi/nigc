@@ -84,3 +84,61 @@ class LoginController extends Controller
         ]);
     }
 }
+
+//use Illuminate\Http\Request;
+//use Illuminate\Validation\ValidationException;
+//use Illuminate\Support\Facades\Auth;
+//use App\Http\Controllers\Controller;
+//use App\Providers\RouteServiceProvider;
+//use Illuminate\Foundation\Auth\AuthenticatesUsers;
+//
+//class LoginController extends Controller
+//{
+//    use AuthenticatesUsers;
+//
+//    protected $redirectTo = RouteServiceProvider::HOME;
+//
+//    public function __construct()
+//    {
+//        $this->middleware('guest')->except('logout');
+//    }
+//
+//    public function username()
+//    {
+//        $value = request()->input('username');
+//
+//        if (filter_var($value, FILTER_VALIDATE_EMAIL)) {
+//            request()->merge(['email' => $value]);
+//            return 'email';
+//        } elseif (preg_match("/^[a-z,.'-]+/", $value)) {
+//            request()->merge(['username' => $value]);
+//            return 'username';
+//        } else {
+//            request()->merge(['email' => $value]);
+//            return 'email';
+//        }
+//    }
+//
+//    protected function validateLogin(Request $request)
+//    {
+//        $request->validate([
+//            'username' => 'required|string',
+//            'password' => 'required|string',
+//        ]);
+//    }
+//
+//    protected function sendFailedLoginResponse(Request $request)
+//    {
+//        throw ValidationException::withMessages([
+//            'username' => [trans('auth.failed')],
+//        ]);
+//    }
+//
+//    protected function attemptLogin(Request $request)
+//    {
+//        return Auth::attempt(
+//            $this->credentials($request),
+//            $request->filled('remember')
+//        );
+//    }
+//}
