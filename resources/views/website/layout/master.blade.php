@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}" class="bg-light">
 
 <head>
     <meta charset="utf-8">
@@ -35,6 +35,13 @@
 
     <!-- Template Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{asset('website/css/style.css')}}">
+
+{{--    language   --}}
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="{{asset('website/css/styler_rtl.css')}}">
+    @else
+        <link rel="stylesheet" href="{{asset('website/css/style.css')}}">
+    @endif
 </head>
 
 

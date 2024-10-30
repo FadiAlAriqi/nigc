@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>AMD Login</title>
+    <title>NiGC Login</title>
 
     <!-- Fonts -->
 {{--    <link rel="dns-prefetch" href="//fonts.bunny.net">--}}
@@ -27,7 +27,7 @@
 <body>
 <ul class="nav navbar-nav navbar-nav-centered">
     <li class="dropdown">
-        <a class="nav-item dropdown-toggle text-gold" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('amd.language')}} <img src="{{asset('website/images/language-svg.png')}}" width="20px" alt=""> </a>
+        <a class="nav-item dropdown-toggle text-gold" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('nigc.language')}} <img src="{{asset('website/images/language-svg.png')}}" width="20px" alt=""> </a>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a></li>
             <li><a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a></li>
