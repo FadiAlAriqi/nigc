@@ -1,76 +1,105 @@
-"use strict"
-// Main slider initiate
-$('.main-slider').slick({
-    infinite: true,
-    speed: 1000,
-    autoplay: false,
-    autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    fade: true
-});
-$(window).on('load',function(){
-    /*var cloudBG = $('.cloud-bg', '#header-holder');
-    $('#header-holder').on("mousemove",function(e){
-        var posX = 50 + e.pageX/50;
-        var posY = 100 + e.pageY/100;
-        $(cloudBG).css("background-position",posX+"% "+posY+"%");
-    });
-    */
-   
-    // Add functionality for the toggle button in the pricing page
-    var dToggle = $('#d-toggle');
-    var planPeriod = $('.pricing-price .duration', '.pricing-box');
-    dToggle.on('click', function(){
-        $('.fd',this).toggleClass('active');
-        $('.button',this).toggleClass('on');
-        $('.sd',this).toggleClass('active');
-        
-        if(planPeriod.hasClass('annouly')){
-            planPeriod.text('/mo');
-            for(var i=0;i<=2;i++){
-                $('.pricing-box:eq('+i+') .num').text(parseFloat(Number($('.pricing-box:eq('+i+') .num').text())/12).toFixed(2));
+(function ($) {
+    "use strict";
+
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
             }
-        }else{
-            planPeriod.text('/yr');
-            for(var i=0;i<=2;i++){
-                $('.pricing-box:eq('+i+') .num').text(parseFloat(Number($('.pricing-box:eq('+i+') .num').text())*12).toFixed(2));
-            }
-        }
-        planPeriod.toggleClass('annouly');
-    });
-
-    // Add scroll animation for hash links
-    $('a[href*=\\#]').on('click', function(event){
-        event.preventDefault();
-        var elPos = 0;
-        if($(this).attr('href')!='#'){
-            elPos = $(this.hash).offset().top;
-        }
-        $('html,body').animate({scrollTop:elPos}, 500);
-    });
-
-    // About page "about.html"
-    // Fix image resize issue.
-    var photoHolder1 = $(".photo-holder.photo1", ".text-photo-sc");
-    var textHolder1 = $(".text-holder.text1",".text-photo-sc");
-
-    var photoHolder2 = $(".photo-holder.photo2", ".text-photo-sc");
-    var textHolder2 = $(".text-holder.text2",".text-photo-sc");
+        }, 1);
+    };
+    spinner(0);
     
-    if ($(window).width() > 990) {
-        photoHolder1.css("height",textHolder1.height());
-        photoHolder2.css("height",textHolder2.height());
-    }
-    // About page "about.html"
-    // Fix image resize issue when the window resized
-    $(window).on("resize",function() {
-        if ($(window).width() > 990) {
-            photoHolder1.css("height",textHolder1.height());
-            photoHolder2.css("height",textHolder2.height());
+    
+    // Initiate the wowjs
+    new WOW().init();
+
+
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 45) {
+            $('.nav-bar').addClass('sticky-top shadow-sm');
+        } else {
+            $('.nav-bar').removeClass('sticky-top shadow-sm');
         }
+    });
+
+    // Facts counter
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 5,
+        time: 2000
+    });
+
+
+    // Modal Video
+    $(document).ready(function () {
+        var $videoSrc;
+        $('.btn-play').click(function () {
+            $videoSrc = $(this).data("src");
+        });
+        console.log($videoSrc);
+
+        $('#videoModal').on('shown.bs.modal', function (e) {
+            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        })
+
+        $('#videoModal').on('hide.bs.modal', function (e) {
+            $("#video").attr('src', $videoSrc);
+        })
+    });
+
+
+    // Testimonial-carousel
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 2000,
+        center: false,
+        dots: false,
+        loop: true,
+        margin: 25,
+        nav : true,
+        navText : [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ],
+        responsiveClass: true,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:2
+            },
+            1200:{
+                items:2
+            }
+        }
+    });
+
+    
+    
+   // Back to top button
+   $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+        $('.back-to-top').fadeIn('slow');
+    } else {
+        $('.back-to-top').fadeOut('slow');
+    }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-});
+
+
+   
+
+})(jQuery);
+
