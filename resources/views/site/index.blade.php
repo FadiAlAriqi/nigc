@@ -31,6 +31,8 @@
     <!-- Template Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{asset('site/assets/css/style.css')}}">
 {{--    <link href="css/style.css" rel="stylesheet">--}}
+
+
 </head>
 
 
