@@ -1,37 +1,62 @@
-<nav id="nav" class="navbar navbar-full">
-    <div class="container-fluid">
-        <div class="container container-nav">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="navbar-header" style="position: absolute">
-                        <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{{route('index')}}">
-                            <img src="{{asset('storage/'.$mainContent['header_logo_'.app()->getLocale()])}}" height="{{$mainContent['header_logo_height_'.app()->getLocale()]}}px" width="{{$mainContent['header_logo_width_'.app()->getLocale()]}}px" alt="Logo">
-                        </a>
-                    </div>
-
-                    <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse navbar-collapse-centered" id="bs">
-                        <ul class="nav navbar-nav navbar-nav-centered">
-                            <li class="nav-item1"><a class="nav-link" href="{{route('index')}}">{{__('amd.home')}}</a></li>
-                            <li class="nav-item2"><a class="nav-link" href="#services">{{__('amd.our_service')}}</a></li>
-                            <li class="nav-item3"><a class="nav-link" href="#about_as">{{__('amd.about')}}</a></li>
-                            <li class="nav-item4"><a class="nav-link" href="#manager_speech">{{__('amd.manager_speech')}}</a></li>
-                            <li class="nav-item5"><a class="nav-link" href="#Message_and_vision">{{__('amd.massage_and_vision')}}</a></li>
-                            <li class="nav-item6 dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('amd.language')}} <img src="{{asset('website/images/language-svg.png')}}" width="20px" alt=""> </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a></li>
-                                    <li><a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<!-- Topbar Start -->
+<div class="container-fluid bg-primary px-5 d-none d-lg-block">
+    <div class="row gx-0 align-items-center">
+        <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+            <div class="d-flex">
+                <a href="#" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>Example@gmail.com</a>
+                <a href="#" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890</a>
+            </div>
+        </div>
+        <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal text-secondary"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal text-secondary"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal text-secondary"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal text-secondary"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal text-secondary"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <a href="#" class="text-muted me-2"> Help</a><small> / </small>
+                <a href="#" class="text-muted mx-2"> Support</a><small> / </small>
+                <a href="#" class="text-muted ms-2"> Contact</a>
             </div>
         </div>
     </div>
-</nav>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar & Hero Start -->
+<div class="container-fluid nav-bar p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="display-5 text-secondary m-0"><img src="{{asset('website/img/brand-logo.png')}}" class="img-fluid" alt="">Travisa</h1>
+            <!-- <img src="img/logo.png" alt="Logo"> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#" class="nav-item nav-link active">Home</a>
+                <a href="#" class="nav-item nav-link">About</a>
+                <a href="#" class="nav-item nav-link">Service</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Pages</span></a>
+                    <div class="dropdown-menu m-0">
+                        <a href="#" class="dropdown-item">Feature</a>
+                        <a href="#" class="dropdown-item">Countries</a>
+                        <a href="#" class="dropdown-item">Testimonial</a>
+                        <a href="#" class="dropdown-item">Training</a>
+                        <a href="#" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="#" class="nav-item nav-link">Contact</a>
+            </div>
+            <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+            <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
+        </div>
+    </nav>
+</div>
+<!-- Navbar & Hero End -->

@@ -1,68 +1,75 @@
 <!DOCTYPE html>
-<html lang="{{app()->getLocale() == 'ar' ? : 'en'}}" dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}">
+<html lang="en">
 
-<!-- Mirrored from brandio.io/envato/hustbee/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Mar 2024 20:41:33 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMD</title>
+    <meta charset="utf-8">
+    <title>Travisa - Visa & Immigration Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="{{asset('website/css/all.css')}}"/>
+    <link href="{{asset('website/css/bootstrap-icons.css')}}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{asset('website/lib/animate/animate.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('website/lib/owlcarousel/assets/owl.carousel.min.css')}}">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{asset('website/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('website/css/bootstrap.rtl.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('website/css/fontawesome-all.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('website/css/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('website/css/custom.css')}}">
-    <link rel="stylesheet" href="{{asset('website/css/templatemo-misc.css')}}">
-    <link rel="stylesheet" href="{{asset('website/css/templatemo-main.css')}}">
 
-    @if(app()->getLocale() == 'ar')
-        <link rel="stylesheet" href="{{asset('website/css/styleRTL.css')}}">
-    @else
-        <link rel="stylesheet" href="{{asset('website/css/style.css')}}">
-    @endif
-
-
-
-    <script src="{{asset('website/js/jquery-1.10.2.min.js')}}"></script>
-    <script src="https://kit.fontawesome.com/29e52940e1.js" crossorigin="anonymous"></script>
-
-
-    {{-- <link href="{{asset('website/dist/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('website/carousel.css')}}" rel="stylesheet"> --}}
-
-
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{asset('website/css/style.css')}}">
 </head>
+
+
+
 <body>
-<div id="header-holder">
 
-    <!-- partial:partials/_navbar.html -->
+<!-- Spinner Start -->
+{{--<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">--}}
+{{--    <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">--}}
+{{--        <span class="sr-only">Loading...</span>--}}
+{{--    </div>--}}
+{{--</div>--}}
+<!-- Spinner End -->
+
+
+<!-- Header Start -->
     @include('website.include.header')
-    <!-- partial -->
-    @yield('navContent')
-</div>
+<!-- Header End -->
+
+
+<!-- Body Start -->
+    @yield('content')
+<!-- Body End -->
+
+
+<!-- Footer Start -->
+    @include('website.include.footer')
+<!-- Footer End -->
 
 
 
 
-<!-- start content -->
-@yield('content')
-<!-- end content -->
-
-
-<!-- start footer -->
-@include('website.include.footer')
-<!-- end footer -->
-
-
+<!-- JavaScript Libraries -->
 <script src="{{asset('website/js/jquery.min.js')}}"></script>
-<script src="{{asset('website/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('website/js/slick.min.js')}}"></script>
-<script src="{{asset('website/js/main.js')}}"></script>
-<script src="{{asset('website/dist/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('website/app.js')}}"></script>
-<script src="{{asset('website/script.js')}}"></script>
+<script src="{{asset('website/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('website/lib/wow/wow.min.js')}}"></script>
+<script src="{{asset('website/lib/easing/easing.min.js')}}"></script>
+<script src="{{asset('website/lib/waypoints/waypoints.min.js')}}"></script>
+<script src="{{asset('website/lib/counterup/counterup.min.js')}}"></script>
+<script src="{{asset('website/lib/owlcarousel/owl.carousel.min.js')}}"></script>
 
-    <script src="{{asset('website/js/plugins.js')}}"></script>
-    <script src="{{asset('website/js/jquery.lightbox.js')}}"></script>
-    <script src="{{asset('website/js/custom.js')}}"></script>
+<!-- Template Javascript -->
+<script src="{{asset('website/js/main.js')}}"></script>
 </body>
+
 </html>
