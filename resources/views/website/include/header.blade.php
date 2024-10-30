@@ -53,16 +53,16 @@
 {{--                    </div>--}}
 {{--                </div>--}}
                 <a href="#" class="nav-item nav-link">{{__('nigc.contact')}}</a>
+                <a class="nav-item nav-link">
+                    @if (app()->getLocale() == 'ar')
+                        <a class="nav-link d-flex justify-content-center align-items-center  "
+                           href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a>
+                    @else
+                        <a class="nav-link d-flex justify-content-center align-items-center "
+                           href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a>
+                    @endif
+                </a>
             </div>
-            <li class="list-inline-item notification-list d-none d-sm-inline-block">
-                @if (app()->getLocale() == 'ar')
-                    <a class="nav-link d-flex justify-content-center align-items-center  "
-                       href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a>
-                @else
-                    <a class="nav-link d-flex justify-content-center align-items-center "
-                       href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a>
-                @endif
-            </li>
         </div>
     </nav>
 </div>
