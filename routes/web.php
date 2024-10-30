@@ -22,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 //    return view('website.index');
 //})->name('index');
 
-//Route::get('/index', function () {
-//    return view('website.index');
-//})->name('index');
+Route::get('/index', function () {
+    return view('site.index');
+})->name('index');
 
 Route::middleware('web')->group(function () {
 //    Route::get('/', function () {
