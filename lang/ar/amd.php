@@ -1,0 +1,24 @@
+<?php
+
+return [
+    'login' => 'تسجيل الدخول',
+    'home' => 'الصفحة الرئيسية',
+    'about_us' => 'من نحن',
+    'about' => 'حولنا',
+    'manager_speech' => 'كلمة المدير',
+    'massage_and_vision' => 'الرسالة والرؤية',
+    'our_service' => 'خدماتنا',
+    'language' => 'اللغة',
+    'services' => 'الخدمات',
+    'serve' => 'نخدم أكثر من',
+    'address' => 'موقعنا',
+    'facebook' => 'فيسبوك',
+    'twitter' => 'تويتر',
+    'whatsapp' => 'واتساب',
+    'instagram' => 'انستجرام',
+    'snapchat' => 'سناب شات',
+    'linkedin' => 'لينكد ان',
+    'tiktok' => 'تيك توك',
+    'contact_us' => 'تواصل معنا',
+    'dashboard' => 'لوحة التحكم',
+];

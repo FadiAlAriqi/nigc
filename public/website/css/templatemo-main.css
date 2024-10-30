@@ -1,0 +1,51 @@
+/*------------------------------------------------------
+	Contact Styles
+--------------------------------------------------------*/
+.flexslider {
+    /* margin-top: 114px; */
+    width: 100%;
+    max-width: 100%;
+    min-width: 50%;
+    overflow: hidden;
+    padding-bottom: -50px;
+  }
+
+  .flex-direction-nav a {
+    color: #112B25;
+    width: 40px;
+    height: 40px;
+    background-color: #B2A461;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: -20px 0 0 0;
+    text-align: center;
+    line-height: 40px;
+  }
+  /*
+  .flex-caption {
+    position: absolute;
+    top: 39%;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    color: white;
+  }
+  .flex-caption h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 45px;
+  }
+  .flex-caption p {
+    font-size: 18px;
+    font-family: 'Droid Serif', serif;
+    line-height: 28px;
+  }
+  .flex-caption span {
+    background: url(../images/slider-dec.png) no-repeat;
+    width: 60px;
+    height: 9px;
+    display: block;
+    margin: 30px auto;
+  } */
