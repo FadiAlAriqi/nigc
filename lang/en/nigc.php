@@ -25,4 +25,5 @@ return [
     'tiktok' => 'Tiktok',
     'contact_us' => 'Contact Us',
     'dashboard' => 'Dashboard',
+    'name' => 'NiGC',
 ];

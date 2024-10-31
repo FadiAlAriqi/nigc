@@ -107,7 +107,7 @@ return [
     'manager_speech' => 'كلمة المدير',
     'massage_and_vision' => 'الرسالة والرؤية',
     'contact_info' => 'معلومات التواصل',
-    'view_amd_site' => 'عرض الموقع',
+    'view_site' => 'عرض الموقع',
     'address' => 'الموقع',
     'height' => 'الطول',
     'width' => 'العرض',

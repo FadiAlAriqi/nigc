@@ -2,7 +2,7 @@
 
     <div class="topbar-left	d-none d-lg-block">
         <div class="text-center">
-            <a href="{{route('admin.index.index')}}" class="logo"><img src="{{asset('admin/images/logo.png')}}" height="56" alt="logo"></a>
+            <a href="{{route('admin.index.index')}}" class="logo"><img src="{{asset('admin/images/logo_nigc.ico')}}" height="56" alt="logo"></a>
 {{--            <a href="{{route('admin.index.index')}}" class="logo">--}}
 {{--                <img src="{{asset('storage/'.$mainContent['header_logo_'.app()->getLocale()])}}" height="{{$mainContent['header_logo_height_'.app()->getLocale()]}}px" width="{{$mainContent['header_logo_width_'.app()->getLocale()]}}px" alt="Logo">--}}
 {{--            </a>--}}
@@ -40,7 +40,7 @@
 
             <li class="list-inline-item notification-list d-none d-sm-inline-block">
                 <a href="{{route('index')}}" class="nav-link waves-effect" target="_blank">
-                    {{__('dashboard.view_amd_site')}}
+                    {{__('dashboard.view_site')}}
                 </a>
             </li>
 
