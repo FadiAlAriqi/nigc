@@ -9,7 +9,7 @@
                     <div class="p-2">
                         <h4 class="text-muted float-right font-18 mt-4">{{__('dashboard.signin')}}</h4>
                         <div class="logo2">
-                            <a href="#" class="logo logo-admin"><img src="{{asset('admin/images/logo.png')}}" height="28" alt="logo"></a>
+                            <a href="#" class="logo logo-admin"><img src="{{asset('admin/images/logo_nigc.svg')}}" height="28" alt="logo"></a>
                         </div>
                     </div>
 
