@@ -326,7 +326,8 @@ dd {
 }
 
 .bg-info {
-  background-color: #4bbbce !important;
+  /*background-color: #4bbbce !important;*/
+  background-color: #007bff !important;
 }
 
 .bg-warning {
@@ -3350,17 +3351,6 @@ table.focus-on tbody tr.focused td {
     color: #ffffff;
 }
 
-.save {
-    margin-right: 212px;
-    margin-top: 30px;
-}
-
-.cancel
-{
-    margin-right: -190px;
-    margin-top: 30px;
-}
-
 .Reg_submit
 {
     margin-right: 50%
@@ -3388,3 +3378,49 @@ table.focus-on tbody tr.focused td {
     text-align: right;
 }
 /*# sourceMappingURL=style.css.map */
+
+.back
+{
+    margin-right: 210px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.back2
+{
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.save0 {
+    margin-right: 212px;
+    margin-top: 10px;
+}
+
+.cancel0
+{
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 6px 30px;
+}
+
+.save2
+{
+    margin-top: 30px;
+}
+
+.cancel2
+{
+    margin-right: 20px;
+    margin-top: 30px;
+    padding: 6px 30px;
+}
+
+.head_back
+{
+    margin-right: 20px;
+}

@@ -5,12 +5,9 @@
             <div class="page-title-box">
                 <div class="row align-items-center">
                     <div class="col-md-12">
-                        <h4 class="page-title m-0" style="color: #B5A362;">{{__('dashboard.business_details')}}</h4>
+                        <h4 class="page-title m-0" style="color: #B5A362;">{{__('business.show_images')}}</h4>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex" style="margin-bottom: 10px; margin-right: 10px; margin-left: 10px;">
-                <a href="{{--{{route('admin.service.index')}}--}}" class="btn" style="color: white; background-color: #B5A362">{{__('dashboard.back')}}</a>
             </div>
         </div>
     </div>
@@ -21,73 +18,16 @@
             <div class="card m-b-30">
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_ar')}}</label>
-                        <div class="col-sm-10">
-                            <input name="title_ar" value="{{--{{$service->title_ar}}--}}" class="form-control" type="text" id="example-text-input" readonly>
-                        </div>
+                        <label for="example-tel-input" class="col-sm-12 col-form-label" style="font-size:20px">{{__('business.business_image')}} : {{$ourBusinessImage->our_business['title_'.app()->getLocale()]}}</label>
                     </div>
 
                     <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_en')}}</label>
-                        <div class="col-sm-10">
-                            <input name="title_en" value="{{--{{$service->title_en}}--}}" class="form-control" type="text" id="example-text-input" readonly>
+                        <div class="col-sm-6">
+                            <img src="{{url('storage/'.$ourBusinessImage->image)}}" width="300" disabled="">
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.business_ar')}}</label>
-                        <div class="col-sm-10">
-                            <textarea name="business_ar" id="textarea" class="form-control" rows="3" placeholder="Type your business here" readonly>{{--{{$service->service_ar}}--}}</textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.business_en')}}</label>
-                        <div class="col-sm-10">
-                            <textarea name="service_en" id="textarea" class="form-control" rows="3" placeholder="Type your business here" readonly>{{--{{$service->service_en}}--}}</textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images_note_ar')}}</label>
-                        <div class="col-sm-10">
-                            <textarea name="images_note_ar" value="" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
-                            @error('images_note_ar')
-                            <span class="text-danger">{{$message}}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images_note_en')}}</label>
-                        <div class="col-sm-10">
-                            <textarea name="images_note_en" value="" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
-                            @error('images_note_en')
-                            <span class="text-danger">{{$message}}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images')}}</label>
-                        <div class="col-sm-10">
-                            <div class="form-control">
-                                <input name="images" value="" type="file" class="file" multiple>
-                                @error('images')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
-
-                    {{--                    <div class="form-group row">--}}
-                    {{--                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.image')}}</label>--}}
-                    {{--                        <div class="col-sm-10">--}}
-                    {{--                            <div>--}}
-                    {{--                                <img src="{{asset('storage/'.$service->image)}}"style="border-radius: 50%; height: 130px; width: 130px" class="form-control">--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
+                    <a href="{{route('admin.ourBusiness.showImages', $ourBusinessId)}}" class="btn bg-info back2">{{__('dashboard.back')}}</a>
                 </div>
             </div>
         </div>

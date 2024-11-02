@@ -17,13 +17,13 @@
         <div class="col-12">
             <div class="card m-b-30">
                 <div class="card-body">
-                    <form method="post" action=""  class="forms-sample" enctype="multipart/form-data">
+                    <form method="post" action="{{route('admin.ourBusiness.update', $ourBusiness->id)}}"  class="forms-sample" enctype="multipart/form-data">
                         @csrf
                         @method("put")
                         <div class="form-group row">
                             <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_ar')}}</label>
                             <div class="col-sm-10">
-                                <input name="title_ar" value="" class="form-control" type="text" id="example-text-input">
+                                <input name="title_ar" value="{{$ourBusiness->title_ar}}" class="form-control" type="text" id="example-text-input">
                                 @error('title_ar')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
@@ -33,7 +33,7 @@
                         <div class="form-group row">
                             <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_en')}}</label>
                             <div class="col-sm-10">
-                                <input name="title_en" value="" class="form-control" type="text" id="example-text-input">
+                                <input name="title_en" value="{{$ourBusiness->title_en}}" class="form-control" type="text" id="example-text-input">
                                 @error('title_en')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
@@ -41,41 +41,59 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.image')}}</label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.business_description_ar')}}</label>
+                            <div class="col-sm-10">
+                                <textarea name="business_description_ar" id="textarea" class="form-control" rows="3" placeholder="اكتب وصف العمل هنا ...">{{$ourBusiness->business_description_ar}}</textarea>
+                                @error('business_description_ar')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.business_description_en')}}</label>
+                            <div class="col-sm-10">
+                                <textarea name="business_description_en" id="textarea" class="form-control" rows="3" placeholder="Type business description here ...">{{$ourBusiness->business_description_en}}</textarea>
+                                @error('business_description_en')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.images')}}</label>
                             <div class="col-sm-10">
                                 <div class="form-control">
-                                    <input name="image" value="" type="file" class="file">
-                                    @error('image')
+                                    <input name="business_images[]" class="@error('business_images') is-invalid @enderror" type="file" multiple >
+                                    @error('business_images')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.business_ar')}}</label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.note_ar')}}</label>
                             <div class="col-sm-10">
-                                <textarea name="business_ar" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
-                                @error('business_ar')
+                                <textarea name="note_ar" id="textarea" class="form-control" rows="3" placeholder="اكتب الملاحظة هنا ...">{{$ourBusiness->note_ar}}</textarea>
+                                @error('note_ar')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.business_en')}}</label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.note_en')}}</label>
                             <div class="col-sm-10">
-                                <textarea name="business_en" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
-                                @error('business_en')
+                                <textarea name="note_en" id="textarea" class="form-control" rows="3" placeholder="Type note here ...">{{$ourBusiness->note_en}}</textarea>
+                                @error('note_en')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                         </div>
 
-
-                        <button type="submit" class="btn bg-green text-dark save">{{__('dashboard.save_changes')}}</button>
-                        <a href="" class="btn bg-pink cancel">{{__('dashboard.cancel')}}</a>
+                        <button type="submit" class="btn bg-green text-dark save0">{{__('dashboard.save_changes')}}</button>
+                        <a href="{{route('admin.ourBusiness.index')}}" class="btn bg-pink cancel0">{{__('dashboard.cancel')}}</a>
                     </form>
                 </div>
             </div>
