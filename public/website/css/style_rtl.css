@@ -899,9 +899,9 @@
 /*** Footer End ***/
 
 
-/*** copyleft Start ***/
-.copyleft {
+/*** copyright Start ***/
+.copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     background: var(--bs-secondary) !important;
 }
-/*** copyleft end ***/
+/*** copyright end ***/

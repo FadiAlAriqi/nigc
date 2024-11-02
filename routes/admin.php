@@ -18,6 +18,7 @@ use App\Http\Controllers\admin\MainContentController;
 use App\Http\Controllers\admin\ManagerSpeechController;
 use App\Http\Controllers\admin\MessageAndVisionController;
 use App\Http\Controllers\admin\MessageController;
+use App\Http\Controllers\admin\OurBusinessController;
 use App\Http\Controllers\admin\ServeController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SlideshowController;
@@ -41,6 +42,7 @@ Route::middleware('auth')->group(function (){
     Route::resource('socialMedia' , SocialMediaController::class);
     Route::resource('mainContent' , MainContentController::class);
     Route::resource('user' , UserController::class);
+    Route::resource('ourBusiness' , OurBusinessController::class);
 });
 
 
