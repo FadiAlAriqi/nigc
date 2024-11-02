@@ -3,7 +3,6 @@
 <div class="page-content-wrapper ">
 
     <div class="container-fluid">
-
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
