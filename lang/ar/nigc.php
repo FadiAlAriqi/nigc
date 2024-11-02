@@ -26,6 +26,7 @@ return [
     'contact_us' => 'تواصل معنا',
     'dashboard' => 'لوحة التحكم',
     'name' => 'تنفيذ الشبكة',
+    'company_name' => 'تنفيذ الشبكة للمقاولات العامة',
     'done_projects' => 'الأعمال المنجزة',
     'our_team' => 'فريق العمل',
     'process_projects' => 'أعمال قيد التنفيذ',
