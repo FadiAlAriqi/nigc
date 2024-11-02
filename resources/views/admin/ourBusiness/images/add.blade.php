@@ -21,6 +21,27 @@
                         @csrf
 
                         <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_ar')}}</label>
+                            <div class="col-sm-10">
+                                <input name="title_ar" value="{{old('title_ar')}}" class="form-control" type="text" id="example-text-input">
+                                @error('title_ar')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_en')}}</label>
+                            <div class="col-sm-10">
+                                <input name="title_en" value="{{old('title_en')}}" class="form-control" type="text" id="example-text-input">
+                                @error('title_en')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
                             <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images')}}</label>
                             <div class="col-sm-10">
                                 <div class="form-control">
@@ -32,7 +53,29 @@
                             </div>
                         </div>
 
-{{--                        <div class="form-group row">--}}
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images_note_ar')}}</label>
+                            <div class="col-sm-10">
+                                <textarea name="images_note_ar" value="{{old('business_ar')}}" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
+                                @error('images_note_ar')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images_note_en')}}</label>
+                            <div class="col-sm-10">
+                                <textarea name="images_note_en" value="{{old('business_en')}}" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
+                                @error('images_note_en')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+
+                        {{--                        <div class="form-group row">--}}
 {{--                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.height')}}</label>--}}
 {{--                            <div class="col-sm-10">--}}
 {{--                                <input name="height" value="{{old('height')}}" class="form-control" type="number" min="0" max="500" id="example-text-input" placeholder="100">--}}
