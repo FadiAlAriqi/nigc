@@ -1,27 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\amd;
+namespace App\Http\Controllers\nigc;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
 use App\Models\Contact;
 use App\Models\MainContent;
-use App\Models\ManagerSpeech;
 use Illuminate\Http\Request;
 
-class ManagerSpeechController extends Controller
+class AboutUsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $managerSpeech = ManagerSpeech::latest()->first();
+        $aboutUs = AboutUs::latest()->first();
         $mainContent = MainContent::latest()->first();
         $contact = Contact::latest()->first();
 
-
-        return view('website.managerSpeech')->with([
-            'managerSpeech' => $managerSpeech,
+        return view('website.aboutUs')->with([
+            'aboutUs' => $aboutUs,
             'mainContent' => $mainContent,
             'contact' => $contact,
 

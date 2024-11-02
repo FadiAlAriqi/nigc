@@ -1,23 +1,30 @@
 <?php
 
-namespace App\Http\Controllers\amd;
+namespace App\Http\Controllers\nigc;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\MainContent;
+use App\Models\MessageAndVision;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class MessageAndVisionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-//        $contact = Contact::get();
-//
-//        return view('website.include.footer')->with([
-//            'contacts' => $contact->all(),
-//        ]);
+        $messageAndVision = MessageAndVision::latest()->first();
+        $mainContent = MainContent::latest()->first();
+        $contact = Contact::latest()->first();
+
+        return view('website.messageAndVision')->with([
+            'messageAndVision' => $messageAndVision,
+            'mainContent' => $mainContent,
+            'contact' => $contact,
+
+        ]);
     }
 
     /**
