@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d5d16c-465a-4ce7-9351-8e6007c045fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/show.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="b7d5d16c-465a-4ce7-9351-8e6007c045fa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +190,7 @@
       <workItem from="1730297523042" duration="10449000" />
       <workItem from="1730347417558" duration="5314000" />
       <workItem from="1730365266606" duration="284000" />
-      <workItem from="1730533664686" duration="11530000" />
+      <workItem from="1730533664686" duration="12131000" />
     </task>
     <servers />
   </component>
