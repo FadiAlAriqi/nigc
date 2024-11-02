@@ -3,7 +3,7 @@
     <div class="row gx-0 align-items-center">
         <div class="col-lg-5 text-center text-lg-start mb-lg-0">
             <div class="d-flex">
-                <a href="mailto:ibrahim.alkhudhair@nigcc.com" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>support@nigcc.com</a>
+                <a href="mailto:support@nigcc.com" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>support@nigcc.com</a>
                 <a href="tel:0507895555" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>0507895555</a>
             </div>
         </div>
@@ -31,7 +31,7 @@
 <div class="container-fluid nav-bar p-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
         <a href="" class="navbar-brand p-0">
-            <h1 class="display-5 text-secondary m-0"><img src="{{asset('website/img/brand-logo.png')}}" class="img-fluid" alt="">Travisa</h1>
+            <h1 class="display-5 text-secondary m-0"><img src="{{asset('admin/images/logo_nigc.svg')}}" class="" alt="">{{__('nigc.name')}}</h1>
             <!-- <img src="img/logo.png" alt="Logo"> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -40,6 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="#" class="nav-item nav-link active">{{__('nigc.home')}}</a>
+                <a href="#" class="nav-item nav-link">{{__('nigc.our_projects')}}</a>
                 <a href="#" class="nav-item nav-link">{{__('nigc.about')}}</a>
                 <a href="#" class="nav-item nav-link">{{__('nigc.services')}}</a>
 {{--                <div class="nav-item dropdown">--}}

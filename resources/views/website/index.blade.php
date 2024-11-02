@@ -1,6 +1,7 @@
 @extends('website.layout.master')
 @section('content')
 
+{{--    الصور الرئيسية علشان تكون متحركة --}}
     <!-- Carousel Start -->
     <div class="carousel-header">
         <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -46,28 +47,7 @@
     </div>
     <!-- Carousel End -->
 
-
-    <!-- Modal Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h4 class="modal-title text-secondary mb-0" id="exampleModalLabel">Search by keyword</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center">
-                    <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Search End -->
-
-
-
+{{-- من نحن وايضا الرسالة والرؤية--}}
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -79,8 +59,8 @@
                     </div>
                 </div>
                 <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3">About the company</h5>
-                    <h1 class="display-5 mb-4">We’re Trusted Immigration Consultant Agency.</h1>
+                    <h5 class="sub-title pe-3">{{__('dashboard.about_us')}}</h5>
+                    <h1 class="display-5 mb-4">{{__('nigc.name')}}</h1>
                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint est mollitia saepe! Sequi asperiores rerum nemo!</p>
                     <div class="row gy-4 align-items-center">
                         <div class="col-12 col-sm-6 d-flex align-items-center">
@@ -128,7 +108,7 @@
     </div>
     <!-- About End -->
 
-
+{{--هنا من نخدم ونفس الكلام هذا--}}
     <!-- Counter Facts Start -->
     <div class="container-fluid counter-facts py-5">
         <div class="container py-5">
@@ -194,16 +174,18 @@
     </div>
     <!-- Counter Facts End -->
 
-
-    <!-- Services Start -->
+{{--هنا الاعمال واذا امكن نسوي مع اضافة مشروع صورة تكون صورة الغلاف له ومن إضافة صور تكون لأجل إضافة صور أخرى --}}
+    <!-- Projects Start -->
     <div class="container-fluid service overflow-hidden pt-5">
         <div class="container py-5">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
-                    <h5 class="sub-title text-primary px-3">Visa Categories</h5>
+                    <h5 class="sub-title text-primary px-3">{{__('nigc.our_projects')}}</h5>
                 </div>
-                <h1 class="display-5 mb-4">Enabling Your Immigration Successfully</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
+                <h1 class="display-5 mb-4">{{__('nigc.brief_projects')}}</h1>
+
+                {{--                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>--}}
+
             </div>
             <div class="row g-4">
                 <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -353,10 +335,10 @@
             </div>
         </div>
     </div>
-    <!-- Services End -->
+    <!-- Projects End -->
 
 
-
+{{--هنا عمل خدمات مع الحفاظ على التنسيق والايقونات--}}
     <!-- Features Start -->
     <div class="container-fluid features overflow-hidden py-5">
         <div class="container">
@@ -425,162 +407,7 @@
     <!-- Features End -->
 
 
-
-    <!-- Countries We Offer Start -->
-    <div class="container-fluid country overflow-hidden py-5">
-        <div class="container">
-            <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 70px;">
-                <div class="sub-style">
-                    <h5 class="sub-title text-primary px-3">COUNTRIES WE OFFER</h5>
-                </div>
-                <h1 class="display-5 mb-4">Immigration & visa services following Countries</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-            </div>
-            <div class="row g-4 text-center">
-                <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="country-item">
-                        <div class="rounded overflow-hidden">
-                            <img src="{{asset('website/img/country-1.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="country-flag">
-                            <img src="{{asset('website/img/brazil.jpg')}}" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div class="country-name">
-                            <a href="#" class="text-white fs-4">Brazil</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="country-item">
-                        <div class="rounded overflow-hidden">
-                            <img src="{{asset('website/img/country-2.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="country-flag">
-                            <img src="{{asset('website/img/india.jpg')}}" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div class="country-name">
-                            <a href="#" class="text-white fs-4">india</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="country-item">
-                        <div class="rounded overflow-hidden">
-                            <img src="{{asset('website/img/country-3.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="country-flag">
-                            <img src="{{asset('website/img/usa.jpg')}}" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div class="country-name">
-                            <a href="#" class="text-white fs-4">New York</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="country-item">
-                        <div class="rounded overflow-hidden">
-                            <img src="{{asset('website/img/country-4.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="country-flag">
-                            <img src="{{asset('website/img/italy.jpg')}}" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div class="country-name">
-                            <a href="#" class="text-white fs-4">Italy</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Countries</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Countries We Offer End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial overflow-hidden pb-5">
-        <div class="container py-5">
-            <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="sub-style">
-                    <h5 class="sub-title text-primary px-3">OUR CLIENTS RIVIEWS</h5>
-                </div>
-                <h1 class="display-5 mb-4">What Our Clients Say</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
-                <div class="testimonial-item">
-                    <div class="testimonial-content p-4 mb-5">
-                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.
-                        </p>
-                        <div class="d-flex justify-content-end">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                            <img class="img-fluid rounded-circle" src="{{asset('website/img/testimonial-1.jpg')}}" alt="img">
-                        </div>
-                        <div class="my-auto">
-                            <h5>Person Name</h5>
-                            <p class="mb-0">Profession</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-content p-4 mb-5">
-                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.
-                        </p>
-                        <div class="d-flex justify-content-end">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                            <img class="img-fluid rounded-circle" src="{{asset('website/img/testimonial-2.jpg')}}" alt="img">
-                        </div>
-                        <div class="my-auto">
-                            <h5>Person Name</h5>
-                            <p class="mb-0">Profession</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-content p-4 mb-5">
-                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.
-                        </p>
-                        <div class="d-flex justify-content-end">
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                            <i class="fas fa-star text-secondary"></i>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                            <img class="img-fluid rounded-circle" src="{{asset('website/img/testimonial-3.jpg')}}" alt="img">
-                        </div>
-                        <div class="my-auto">
-                            <h5>Person Name</h5>
-                            <p class="mb-0">Profession</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
+    {{-- او هنا الخدمات مع الحفاظ على التنسيق شوف اين الافضل وسويه--}}
 
     <!-- Training Start -->
     <div class="container-fluid training overflow-hidden bg-light py-5">
@@ -664,75 +491,5 @@
         </div>
     </div>
     <!-- Training End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid contact overflow-hidden pb-5">
-        <div class="container py-5">
-            <div class="office pt-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">Worlwide Offices</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Explore Our Office Worldwide</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="office-item p-4">
-                            <div class="office-img mb-4">
-                                <img src="{{asset('website/img/office-2.jpg')}}" class="img-fluid w-100 rounded" alt="">
-                            </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">Australia</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">+123.456.7890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="office-item p-4">
-                            <div class="office-img mb-4">
-                                <img src="{{asset('website/img/office-1.jpg')}}" class="img-fluid w-100 rounded" alt="">
-                            </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">Canada</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">(012) 0345 6789</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="office-item p-4">
-                            <div class="office-img mb-4">
-                                <img src="{{asset('website/img/office-3.jpg')}}" class="img-fluid w-100 rounded" alt="">
-                            </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">United Kingdom</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">01234.567.890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="office-item p-4">
-                            <div class="office-img mb-4">
-                                <img src="{{asset('website/img/office-4.jpg')}}" class="img-fluid w-100 rounded" alt="">
-                            </div>
-                            <div class="office-content d-flex flex-column">
-                                <h4 class="mb-2">India</h4>
-                                <a href="#" class="text-secondary fs-5 mb-2">+123.45.67890</a>
-                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
+{{--وبيانات التواصل اللي في الفوتر شوف كيف ننسقها تكون في الوسط او ايش نضيف لها علشان تظهر بشكل اجمل--}}
 @stop

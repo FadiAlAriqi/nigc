@@ -5,7 +5,7 @@
             <div class="page-title-box">
                 <div class="row align-items-center">
                     <div class="col-md-12">
-                        <h4 class="page-title m-0" style="color: #B5A362;">{{__('amd.about_us')}}</h4>
+                        <h4 class="page-title m-0" style="color: #B5A362;">{{__('nigc.about_us')}}</h4>
                     </div>
                 </div>
                 @if(Session::has('success'))
