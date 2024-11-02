@@ -40,6 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="#" class="nav-item nav-link active">{{__('nigc.home')}}</a>
+                <a href="#" class="nav-item nav-link">{{__('nigc.our_projects')}}</a>
                 <a href="#" class="nav-item nav-link">{{__('nigc.about')}}</a>
                 <a href="#" class="nav-item nav-link">{{__('nigc.services')}}</a>
 {{--                <div class="nav-item dropdown">--}}

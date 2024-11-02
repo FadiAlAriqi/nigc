@@ -1,7 +1,6 @@
 @extends('website.layout.master')
 @section('content')
 
-{{--    الصور الرئيسية علشان تكون متحركة --}}
     <!-- Carousel Start -->
     <div class="carousel-header">
         <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -47,7 +46,28 @@
     </div>
     <!-- Carousel End -->
 
-{{-- من نحن وايضا الرسالة والرؤية--}}
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h4 class="modal-title text-secondary mb-0" id="exampleModalLabel">Search by keyword</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+
+
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -108,7 +128,7 @@
     </div>
     <!-- About End -->
 
-{{--هنا من نخدم ونفس الكلام هذا--}}
+
     <!-- Counter Facts Start -->
     <div class="container-fluid counter-facts py-5">
         <div class="container py-5">
@@ -174,7 +194,7 @@
     </div>
     <!-- Counter Facts End -->
 
-{{--هنا الاعمال واذا امكن نسوي مع اضافة مشروع صورة تكون صورة الغلاف له ومن إضافة صور تكون لأجل إضافة صور أخرى --}}
+
     <!-- Projects Start -->
     <div class="container-fluid service overflow-hidden pt-5">
         <div class="container py-5">
@@ -338,7 +358,7 @@
     <!-- Projects End -->
 
 
-{{--هنا عمل خدمات مع الحفاظ على التنسيق والايقونات--}}
+
     <!-- Features Start -->
     <div class="container-fluid features overflow-hidden py-5">
         <div class="container">
@@ -407,7 +427,6 @@
     <!-- Features End -->
 
 
-    {{-- او هنا الخدمات مع الحفاظ على التنسيق شوف اين الافضل وسويه--}}
 
     <!-- Training Start -->
     <div class="container-fluid training overflow-hidden bg-light py-5">
@@ -491,5 +510,75 @@
         </div>
     </div>
     <!-- Training End -->
-{{--وبيانات التواصل اللي في الفوتر شوف كيف ننسقها تكون في الوسط او ايش نضيف لها علشان تظهر بشكل اجمل--}}
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid contact overflow-hidden pb-5">
+        <div class="container py-5">
+            <div class="office pt-5">
+                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h5 class="sub-title text-primary px-3">Worlwide Offices</h5>
+                    </div>
+                    <h1 class="display-5 mb-4">Explore Our Office Worldwide</h1>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="{{asset('website/img/office-2.jpg')}}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">Australia</h4>
+                                <a href="#" class="text-secondary fs-5 mb-2">+123.456.7890</a>
+                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
+                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="{{asset('website/img/office-1.jpg')}}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">Canada</h4>
+                                <a href="#" class="text-secondary fs-5 mb-2">(012) 0345 6789</a>
+                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
+                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="{{asset('website/img/office-3.jpg')}}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">United Kingdom</h4>
+                                <a href="#" class="text-secondary fs-5 mb-2">01234.567.890</a>
+                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
+                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="{{asset('website/img/office-4.jpg')}}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">India</h4>
+                                <a href="#" class="text-secondary fs-5 mb-2">+123.45.67890</a>
+                                <a href="#" class="text-muted fs-5 mb-2">travisa@example.com</a>
+                                <p class="mb-0">123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
 @stop

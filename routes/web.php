@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 //})->name('index');
 
 Route::get('/index', function () {
-    return view('site.index');
+    return view('website.ourBusiness.business_details.index');
 })->name('index');
 
 Route::middleware('web')->group(function () {
