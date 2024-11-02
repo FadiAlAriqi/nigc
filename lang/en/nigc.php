@@ -26,9 +26,11 @@ return [
     'contact_us' => 'Contact Us',
     'dashboard' => 'Dashboard',
     'name' => 'NiGC',
+    'company_name' => 'NiGC',
     'done_projects' => 'Done Projects',
     'our_team' => 'Team Members',
     'process_projects' => 'Process Projects',
     'our_projects' => 'Our Projects',
     'brief_projects' => 'Brief Of Our Projects',
+
 ];
