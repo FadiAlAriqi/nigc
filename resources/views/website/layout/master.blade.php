@@ -21,8 +21,12 @@
 
 
     <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="{{asset('website/css/all.css')}}"/>
-    <link href="{{asset('website/css/bootstrap-icons.css')}}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="{{asset('website/css/all.css')}}"/>--}}
+{{--    <link href="{{asset('website/css/bootstrap-icons.css')}}" rel="stylesheet">--}}
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
 
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{asset('website/lib/animate/animate.min.css')}}">
