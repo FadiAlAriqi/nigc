@@ -9,7 +9,7 @@
     <meta content="ThemeDesign" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="shortcut icon" href="{{asset('admin/images/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{asset('admin/images/logo_nigc.svg')}}">
 
 {{--    pop message   --}}
     <link rel="stylesheet" href="{{ asset('admin/css/toastr.css') }}">
