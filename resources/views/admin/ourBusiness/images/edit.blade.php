@@ -22,6 +22,26 @@
                         @method("put")
 
                         <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_ar')}}</label>
+                            <div class="col-sm-10">
+                                <input name="title_ar" value="" class="form-control" type="text" id="example-text-input">
+                                @error('title_ar')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.title_en')}}</label>
+                            <div class="col-sm-10">
+                                <input name="title_en" value="" class="form-control" type="text" id="example-text-input">
+                                @error('title_en')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images')}}</label>
                             <div class="col-sm-10">
                                 <div class="form-control">
@@ -30,6 +50,26 @@
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images_note_ar')}}</label>
+                            <div class="col-sm-10">
+                                <textarea name="images_note_ar" value="" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
+                                @error('images_note_ar')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.images_note_en')}}</label>
+                            <div class="col-sm-10">
+                                <textarea name="images_note_en" value="" id="textarea" class="form-control" rows="3" placeholder="Type your business here"></textarea>
+                                @error('images_note_en')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
                             </div>
                         </div>
 

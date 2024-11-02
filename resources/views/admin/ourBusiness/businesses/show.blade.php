@@ -35,6 +35,18 @@
                     </div>
 
                     <div class="form-group row">
+                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.image')}}</label>
+                        <div class="col-sm-10">
+                            <div class="form-control">
+                                <input name="image" value="" type="file" class="file">
+                                @error('image')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label for="example-text-input" class="col-sm-2 col-form-label">{{__('business.business_ar')}}</label>
                         <div class="col-sm-10">
                             <textarea name="business_ar" id="textarea" class="form-control" rows="3" placeholder="Type your business here" readonly>{{--{{$service->service_ar}}--}}</textarea>
