@@ -37,7 +37,6 @@ class OurBusinessImagesController extends Controller
     public function show(string $id)
     {
         return view('admin.ourBusiness.images.show');
-
     }
 
     /**
