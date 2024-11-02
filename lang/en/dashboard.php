@@ -83,6 +83,7 @@ return [
     'address_en' => 'Address in English',
     'number' => 'Number',
     'image' => 'Image',
+    'images' => 'Images',
     'name' => 'Name',
     'username' => 'Username',
     'email' => 'Email',
@@ -117,7 +118,10 @@ return [
     'add_business' => 'Add Business',
     'add_images' => 'Add Images',
     'business' => 'Businesses',
+    'business_title' => 'Business Title',
     'business_details' => 'Business Details',
+    'business_description' => 'Business Description',
+    'note' => 'Note',
     'distributed_by' => 'Developed By',
     'A & F' => 'A & F',
 ];

@@ -24,7 +24,7 @@ use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SlideshowController;
 use App\Http\Controllers\admin\SocialMediaController;
 use App\Http\Controllers\admin\UserController;
-use App\Http\Controllers\nigc\OurBusinessImagesController;
+use App\Http\Controllers\admin\OurBusinessImagesController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function (){
@@ -45,7 +45,10 @@ Route::middleware('auth')->group(function (){
     Route::resource('mainContent' , MainContentController::class);
     Route::resource('user' , UserController::class);
     Route::resource('ourBusiness' , OurBusinessController::class);
-    Route::resource('ourBusinessImages' , OurBusinessImagesController::class);
+    Route::get('/ourBusiness/our_business_images/{ourBusiness}', [OurBusinessController::class, 'showImages'])->name('ourBusiness.showImages');
+    Route::resource('ourBusinessImages' , OurBusinessImagesController::class)->except(['create']);
+    Route::get('/ourBusinessImages/create/{id}' , [OurBusinessImagesController::class, 'create'])->name('ourBusinessImages.create');
+
 });
 
 

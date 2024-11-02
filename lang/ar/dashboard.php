@@ -83,6 +83,7 @@ return [
     'address_en' => 'العنوان بالإنجليزية',
     'number' => 'العدد',
     'image' => 'الصورة',
+    'images' => 'الصور',
     'name' => 'الاسم',
     'username' => 'اسم المستخدم',
     'email' => 'الإيميل',
@@ -117,7 +118,10 @@ return [
     'add_business' => 'إضافة عمل',
     'add_images' => 'إضافة صور',
     'business' => 'الأعمال',
+    'business_title' => 'عنوان العمل',
     'business_details' => 'تفاصيل العمل',
+    'business_description' => 'وصف العمل',
+    'note' => 'الملاحظة',
     'distributed_by' => 'مطور بواسطة',
     'A & F' => 'A & F',
 ];

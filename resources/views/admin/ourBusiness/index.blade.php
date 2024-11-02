@@ -26,56 +26,66 @@
                             <tr>
                                 <th>{{__('dashboard.id')}}</th>
                                 <th>{{__('dashboard.title')}}</th>
-                                <th>{{__('dashboard.business')}}</th>
-                                <th>{{__('dashboard.images')}}</th>
-                                <th>{{__('dashboard.action')}}</th>
+                                <th>{{__('dashboard.business_description')}}</th>
+                                <th>{{__('dashboard.note')}}</th>
+{{--                                <th>{{__('dashboard.action')}}</th>--}}
                             </tr>
                             </thead>
                             <tbody>
-                            {{--                            @foreach($services as $service)--}}
-                            {{--                                <tr>--}}
-                            {{--                                    <td>--}}
-                            {{--                                        {{$service->id}}--}}
-                            {{--                                    </td>--}}
+                                @foreach($our_businesses as $our_business)
+                                    <tr>
+                                        <td>
+                                            {{$our_business->id}}
+                                        <td>
+                                            {{$our_business['title_'.app()->getLocale()]}}
+                                        </td>
 
-                            {{--                                    <td>--}}
-                            {{--                                        {{$service['title_'.app()->getLocale()]}}--}}
-                            {{--                                    </td>--}}
+                                        <td class="longText">
+                                            {{$our_business['business_description_'.app()->getLocale()]}}
+                                        </td>
 
-                            {{--                                    <td class="longText">--}}
-                            {{--                                        {{$service['service_'.app()->getLocale()]}}--}}
-                            {{--                                    </td>--}}
+                                        </td>
 
-                            {{--                                    <td class="px-1">--}}
-                            {{--                                        <img src="{{asset('storage/'.$service->image)}}" style=" width: 10%">--}}
-                            {{--                                    </td>--}}
+{{--                                        <td>--}}
+{{--                                            {{$our_business->id}}--}}
+{{--                                        </td>--}}
 
-                            {{--                                    <td>--}}
-                            {{--                                        <div class="dropdown mo-mb-2">--}}
-                            {{--                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                            {{--                                                {{__('dashboard.action')}}--}}
-                            {{--                                            </button>--}}
-                            {{--                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
-                            {{--                                                <form method="get" class="dropdown-item" action="{{route('admin.service.edit' , $service->id)}}">--}}
-                            {{--                                                    @csrf--}}
-                            {{--                                                    <button class="dropdown-item" type="submit">{{__('dashboard.edit')}}</button>--}}
-                            {{--                                                </form>--}}
+                                        <td class="longText">
+                                            {{$our_business['note_'.app()->getLocale()]}}
+                                        </td>
 
-                            {{--                                                <form method="post" class="dropdown-item" action="{{route('admin.service.destroy' , $service->id)}}">--}}
-                            {{--                                                    @csrf--}}
-                            {{--                                                    @method('delete')--}}
-                            {{--                                                    <button class="dropdown-item" type="submit" onclick="return confirm('Are u sure ?')">{{__('dashboard.delete')}}</button>--}}
-                            {{--                                                </form>--}}
+                                        <td>
+                                            <div class="dropdown mo-mb-2">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    {{__('dashboard.action')}}
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                            {{--                                                <form method="get" class="dropdown-item" action="{{route('admin.service.show' , $service->id)}}">--}}
-                            {{--                                                    @csrf--}}
-                            {{--                                                    <button class="dropdown-item" type="submit">{{__('dashboard.show')}}</button>--}}
-                            {{--                                                </form>--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </td>--}}
-                            {{--                                </tr>--}}
-                            {{--                            @endforeach--}}
+                                                    <form method="get" class="dropdown-item" action="{{route('admin.ourBusiness.edit' , $our_business->id)}}">
+                                                        @csrf
+                                                        <button class="dropdown-item" type="submit">{{__('dashboard.edit')}}</button>
+                                                    </form>
+
+                                                    <form method="get" class="dropdown-item" action="{{route('admin.ourBusiness.showImages' , $our_business->id)}}">
+                                                        @csrf
+                                                        <button class="dropdown-item" type="submit">{{__('business.show_images')}}</button>
+                                                    </form>
+
+                                                    <form method="post" class="dropdown-item" action="{{route('admin.ourBusiness.destroy' , $our_business->id)}}">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button class="dropdown-item" type="submit" onclick="return confirm('Are u sure ?')">{{__('dashboard.delete')}}</button>
+                                                    </form>
+
+                                                    <form method="get" class="dropdown-item" action="{{route('admin.ourBusiness.show' , $our_business->id)}}">
+                                                        @csrf
+                                                        <button class="dropdown-item" type="submit">{{__('dashboard.show')}}</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
                         </table>
                     </div>
 

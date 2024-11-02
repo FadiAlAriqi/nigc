@@ -203,7 +203,8 @@ code {
 }
 
 .bg-info {
-  background-color: #4bbbce !important;
+  /*background-color: #4bbbce !important;*/
+  background-color: #007bff !important;
 }
 
 .bg-warning {
@@ -3327,17 +3328,6 @@ table.focus-on tbody tr.focused td {
     color: #ffffff;
 }
 
-.save {
-    margin-left: 210px;
-    margin-top: 30px;
-}
-
-.cancel
-{
-    margin-left: 20px;
-    margin-top: 30px;
-}
-
 .Reg_submit
 {
     margin-left: 50%
@@ -3361,3 +3351,48 @@ table.focus-on tbody tr.focused td {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.back
+{
+    margin-left: 210px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.back2
+{
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.save0 {
+    margin-left: 212px;
+    margin-top: 10px;
+}
+
+.cancel0
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 6px 30px;
+}
+
+.save2 {
+    margin-top: 30px;
+}
+
+.cancel2
+{
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 6px 30px;
+}
+
+.head_back
+{
+    margin-left: 20px;
+}
