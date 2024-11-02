@@ -1,23 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\amd;
+namespace App\Http\Controllers\nigc;
 
 use App\Http\Controllers\Controller;
-use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class OurBusinessImagesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-//        $contact = Contact::get();
-//
-//        return view('website.include.footer')->with([
-//            'contacts' => $contact->all(),
-//        ]);
+        return view('admin.ourBusiness.images.index');
     }
 
     /**
@@ -25,7 +20,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.ourBusiness.images.add');
     }
 
     /**
@@ -41,7 +36,7 @@ class ContactController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('admin.ourBusiness.images.show');
     }
 
     /**
@@ -49,7 +44,8 @@ class ContactController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.ourBusiness.images.edit');
+
     }
 
     /**

@@ -24,6 +24,8 @@ use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SlideshowController;
 use App\Http\Controllers\admin\SocialMediaController;
 use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\nigc\OurBusinessImagesController;
+use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function (){
 //    Route::get('/index' ,function (){
@@ -43,6 +45,7 @@ Route::middleware('auth')->group(function (){
     Route::resource('mainContent' , MainContentController::class);
     Route::resource('user' , UserController::class);
     Route::resource('ourBusiness' , OurBusinessController::class);
+    Route::resource('ourBusinessImages' , OurBusinessImagesController::class);
 });
 
 

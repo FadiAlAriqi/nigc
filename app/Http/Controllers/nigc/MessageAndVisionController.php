@@ -1,26 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\amd;
+namespace App\Http\Controllers\nigc;
 
 use App\Http\Controllers\Controller;
-use App\Models\AboutUs;
 use App\Models\Contact;
 use App\Models\MainContent;
+use App\Models\MessageAndVision;
 use Illuminate\Http\Request;
 
-class AboutUsController extends Controller
+class MessageAndVisionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $aboutUs = AboutUs::latest()->first();
+        $messageAndVision = MessageAndVision::latest()->first();
         $mainContent = MainContent::latest()->first();
         $contact = Contact::latest()->first();
 
-        return view('website.aboutUs')->with([
-            'aboutUs' => $aboutUs,
+        return view('website.messageAndVision')->with([
+            'messageAndVision' => $messageAndVision,
             'mainContent' => $mainContent,
             'contact' => $contact,
 

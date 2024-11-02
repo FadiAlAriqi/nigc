@@ -45,7 +45,7 @@
                     <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-briefcase"></i> <span> {{__('dashboard.our_business')}} </span> <span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="list-unstyled">
                         <li><a href="{{route('admin.ourBusiness.index')}}">{{__('dashboard.add_business')}}</a></li>
-                        <li><a href="">{{__('dashboard.add_images')}}</a></li>
+                        <li><a href="{{route('admin.ourBusinessImages.index')}}">{{__('dashboard.add_images')}}</a></li>
                     </ul>
                 </li>
 

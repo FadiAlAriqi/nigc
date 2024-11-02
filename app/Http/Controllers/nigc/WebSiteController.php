@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\amd;
+namespace App\Http\Controllers\nigc;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
