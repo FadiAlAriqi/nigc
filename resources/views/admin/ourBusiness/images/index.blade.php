@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="d-flex" style="margin-bottom: 10px; margin-right: 10px; margin-left: 10px;">
-                <a href="{{--{{route('admin.service.create')}}--}}" class="btn" style="color: white; background-color: #B5A362">{{__('dashboard.add_business')}}</a>
+                <a href="{{route('admin.ourBusinessImages.create ')}}" class="btn" style="color: white; background-color: #B5A362">{{__('dashboard.add_business')}}</a>
             </div>
         </div>
     </div>
@@ -56,18 +56,18 @@
                             {{--                                                {{__('dashboard.action')}}--}}
                             {{--                                            </button>--}}
                             {{--                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
-                            {{--                                                <form method="get" class="dropdown-item" action="{{route('admin.service.edit' , $service->id)}}">--}}
+                            {{--                                                <form method="get" class="dropdown-item" action="{{route('admin.ourBusinessImages.edit' , $images->id)}}">--}}
                             {{--                                                    @csrf--}}
                             {{--                                                    <button class="dropdown-item" type="submit">{{__('dashboard.edit')}}</button>--}}
                             {{--                                                </form>--}}
 
-                            {{--                                                <form method="post" class="dropdown-item" action="{{route('admin.service.destroy' , $service->id)}}">--}}
+                            {{--                                                <form method="post" class="dropdown-item" action="{{route('admin.ourBusinessImages.destroy ' , $images->id)}}">--}}
                             {{--                                                    @csrf--}}
                             {{--                                                    @method('delete')--}}
                             {{--                                                    <button class="dropdown-item" type="submit" onclick="return confirm('Are u sure ?')">{{__('dashboard.delete')}}</button>--}}
                             {{--                                                </form>--}}
 
-                            {{--                                                <form method="get" class="dropdown-item" action="{{route('admin.service.show' , $service->id)}}">--}}
+                            {{--                                                <form method="get" class="dropdown-item" action="{{route('admin.ourBusinessImages.show ' , $images->id)}}">--}}
                             {{--                                                    @csrf--}}
                             {{--                                                    <button class="dropdown-item" type="submit">{{__('dashboard.show')}}</button>--}}
                             {{--                                                </form>--}}

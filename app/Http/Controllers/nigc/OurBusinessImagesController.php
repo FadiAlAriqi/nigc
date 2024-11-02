@@ -12,7 +12,7 @@ class OurBusinessImagesController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.ourBusiness.images.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class OurBusinessImagesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.ourBusiness.images.add');
     }
 
     /**
@@ -36,7 +36,7 @@ class OurBusinessImagesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('admin.ourBusiness.images.show');
     }
 
     /**
@@ -44,7 +44,8 @@ class OurBusinessImagesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.ourBusiness.images.edit');
+
     }
 
     /**
