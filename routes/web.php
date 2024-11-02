@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\amd\AboutUsController;
-use App\Http\Controllers\amd\ManagerSpeechController;
-use App\Http\Controllers\amd\MessageAndVisionController;
-use App\Http\Controllers\amd\WebSiteController;
+use App\Http\Controllers\nigc\AboutUsController;
+use App\Http\Controllers\nigc\ManagerSpeechController;
+use App\Http\Controllers\nigc\MessageAndVisionController;
+use App\Http\Controllers\nigc\WebSiteController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
