@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7d5d16c-465a-4ce7-9351-8e6007c045fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lang/ar/business.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/en/business.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/businesses/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/ourBusiness/images/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/ourBusiness/business_details/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/ourBusiness/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/ar/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/lang/ar/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/ar/nigc.php" beforeDir="false" afterPath="$PROJECT_DIR$/lang/ar/nigc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/en/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/lang/en/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/en/nigc.php" beforeDir="false" afterPath="$PROJECT_DIR$/lang/en/nigc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/website/include/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/include/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/website/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/website/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,27 +166,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aymen/Documents/project/nigc.com/public/website/css&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Aymen/Documents/project/nigc.com/resources/views/website/ourBusiness/business_details",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aymen\Documents\project\nigc.com\resources\views\website\ourBusiness\business_details" />
+      <recent name="C:\Users\Aymen\Documents\project\nigc.com\resources\views\admin\ourBusiness\businesses" />
       <recent name="C:\Users\Aymen\Documents\project\nigc.com\public\website\css" />
       <recent name="C:\Users\Al-Ariqi Fadi\Documents\GitHub\nigc\resources\views\website" />
       <recent name="C:\Users\Al-Ariqi Fadi\Documents\GitHub\nigc\resources\views\website\include" />
-      <recent name="C:\Users\Al-Ariqi Fadi\Documents\GitHub\nigc\resources\views\website\layout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aymen\Documents\project\nigc.com\resources\views\admin\ourBusiness\images" />
       <recent name="C:\Users\Aymen\Documents\project\nigc.com\public\admin\images" />
       <recent name="C:\Users\Al-Ariqi Fadi\Documents\GitHub\nigc\resources\views\admin" />
       <recent name="C:\Users\Al-Ariqi Fadi\Documents\GitHub\nigc\public\website" />
@@ -191,6 +213,7 @@
       <workItem from="1730297523042" duration="10449000" />
       <workItem from="1730347417558" duration="5314000" />
       <workItem from="1730365266606" duration="284000" />
+      <workItem from="1730533664686" duration="10832000" />
     </task>
     <servers />
   </component>

@@ -113,4 +113,11 @@ return [
     'width' => 'Width',
     'cancel' => 'Cancel',
     'back' => 'Back',
+    'our_business' => 'Our Business',
+    'add_business' => 'Add Business',
+    'add_images' => 'Add Images',
+    'business' => 'Businesses',
+    'business_details' => 'Business Details',
+    'distributed_by' => 'Developed By',
+    'A & F' => 'A & F',
 ];

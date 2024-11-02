@@ -26,4 +26,9 @@ return [
     'contact_us' => 'تواصل معنا',
     'dashboard' => 'لوحة التحكم',
     'name' => 'تنفيذ الشبكة',
+    'done_projects' => 'الأعمال المنجزة',
+    'our_team' => 'فريق العمل',
+    'process_projects' => 'أعمال قيد التنفيذ',
+    'our_projects' => 'أعمالنا',
+    'brief_projects' => 'نبذة عن أعمالنا',
 ];

@@ -113,4 +113,11 @@ return [
     'width' => 'العرض',
     'cancel' => 'إلغاء',
     'back' => 'عودة',
+    'our_business' => 'أعمالنا',
+    'add_business' => 'إضافة عمل',
+    'add_images' => 'إضافة صور',
+    'business' => 'الأعمال',
+    'business_details' => 'تفاصيل العمل',
+    'distributed_by' => 'مطور بواسطة',
+    'A & F' => 'A & F',
 ];
