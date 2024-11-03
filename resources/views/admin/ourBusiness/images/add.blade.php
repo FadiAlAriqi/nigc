@@ -44,7 +44,7 @@
                         </div>
 
                         <button type="submit" class="btn bg-green text-dark save">{{__('dashboard.save')}}</button>
-                        <a href="#" class="btn bg-pink cancel" id="rate-btn ">{{__('dashboard.cancel')}}</a>
+                        <button class="btn bg-pink cancel" id="rate-btn ">{{__('dashboard.cancel')}}</button>
                     </form>
                 </div>
             </div>

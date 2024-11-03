@@ -32,4 +32,5 @@ return [
     'process_projects' => 'أعمال قيد التنفيذ',
     'our_projects' => 'أعمالنا',
     'brief_projects' => 'نبذة عن أعمالنا',
+    'add_business_images' => 'إضافة صور',
 ];
