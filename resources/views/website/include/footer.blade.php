@@ -7,8 +7,8 @@
                 <div class="footer-item d-flex flex-column">
                     <h4 class="text-secondary mb-4">Contact Info</h4>
                     <a href=""><i class="fa fa-map-marker-alt me-2"></i>{{$contact['address_'.app()->getLocale()]}}</a>
-                    <a href=""><i class="fas fa-envelope me-2"></i> {{$contact->email}}</a>
-                    <a href=""><i class="fas fa-phone me-2"></i> {{$contact->phone}}</a>
+                    <a href="mailto:{{$contact->email}}"><i class="fas fa-envelope me-2"></i> {{$contact->email}}</a>
+                    <a href="tel:{{$contact->phone}}"><i class="fas fa-phone me-2"></i> {{$contact->phone}}</a>
 {{--                    <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>--}}
                     <div class="d-flex align-items-center">
                         <i class="fas fa-share fa-2x text-secondary me-2"></i>
@@ -77,13 +77,13 @@
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-md-6 text-center text-md-start mb-md-0">
-                <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>NiGC</a>, All right reserved.</span>
             </div>
             <div class="col-md-6 text-center text-md-end text-white">
                 <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                 <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                 <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                <a class="border-bottom text-white" href="https://flamebases.com">Flame Bases</a>
             </div>
         </div>
     </div>

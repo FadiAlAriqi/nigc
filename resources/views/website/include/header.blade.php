@@ -4,8 +4,8 @@
     <div class="row gx-0 align-items-center">
         <div class="col-lg-5 text-center text-lg-start mb-lg-0">
             <div class="d-flex">
-                <a href="#" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>{{$contact->email}}</a>
-                <a href="#" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>{{$contact->phone}}</a>
+                <a href="mailto:{{$contact->email}}" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>{{$contact->email}}</a>
+                <a href="tel:{{$contact->phone}}" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>{{$contact->phone}}</a>
             </div>
         </div>
         <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
