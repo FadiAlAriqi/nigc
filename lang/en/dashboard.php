@@ -122,6 +122,6 @@ return [
     'business_details' => 'Business Details',
     'business_description' => 'Business Description',
     'note' => 'Note',
-    'distributed_by' => 'Developed By',
+    'our_customers' => 'Our Customers',
     'A & F' => 'A & F',
 ];

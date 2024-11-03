@@ -29,6 +29,31 @@
 </div>
 <!-- Carousel End -->
 
+{{--<div class="services section" id="services">--}}
+{{--    <div class="container">--}}
+{{--        <div>--}}
+{{--            <h2 style="font-size:30px; color: #f89a52 ; text-align: center; padding-bottom: 30px;"><b>{{__('amd.services')}}</b></h2>--}}
+{{--            <p style="font-size:20px; color: #444444 ; text-align: center; padding-bottom: 30px;">{{$mainContent['services_title_'.app()->getLocale()]}}</p>--}}
+{{--        </div>--}}
+{{--        <div class="row">--}}
+{{--            @foreach($services as $service)--}}
+{{--                <div class="col-lg-4 col-md-6">--}}
+{{--                    <div class="service-item">--}}
+{{--                        <div class="icon">--}}
+{{--                            <img src="{{asset('storage/'.$service->image)}}" alt="online degrees" style="height: 75px; width: 80px">--}}
+{{--                        </div>--}}
+{{--                        <div class="main-content">--}}
+{{--                            <h4 style="color:#444444;">{{$service['title_'.app()->getLocale()]}}</h4>--}}
+{{--                            <p style="font-size:15px">{{$service['service_'.app()->getLocale()]}}</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+
+
 {{-- من نحن وايضا الرسالة والرؤية--}}
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -36,59 +61,38 @@
             <div class="row g-5">
                 <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="bg-light rounded">
-                        <img src="{{asset('website/img/about-2.png')}}" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                        <img src="{{asset('website/img/about-3.jpg')}}" class="img-fluid w-100 border-bottom border-5 border-primary" style="border-top-right-radius: 300px; border-top-left-radius: 300px;" alt="Image">
+                        <img src="{{asset('storage/'.$aboutUs->image)}}" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
                     </div>
                 </div>
                 <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3">{{__('dashboard.about_us')}}</h5>
-                    <h1 class="display-5 mb-4">{{__('nigc.name')}}</h1>
-                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint est mollitia saepe! Sequi asperiores rerum nemo!</p>
-                    <div class="row gy-4 align-items-center">
-                        <div class="col-12 col-sm-6 d-flex align-items-center">
-                            <i class="fas fa-map-marked-alt fa-3x text-secondary"></i>
-                            <h5 class="ms-4">Best Immigration Resources</h5>
-                        </div>
-                        <div class="col-12 col-sm-6 d-flex align-items-center">
-                            <i class="fas fa-passport fa-3x text-secondary"></i>
-                            <h5 class="ms-4">Return Visas Availabile</h5>
-                        </div>
-                        <div class="col-4 col-md-3">
-                            <div class="bg-light text-center rounded p-3">
-                                <div class="mb-2">
-                                    <i class="fas fa-ticket-alt fa-4x text-primary"></i>
-                                </div>
-                                <h1 class="display-5 fw-bold mb-2">34</h1>
-                                <p class="text-muted mb-0">Years of Experience</p>
-                            </div>
-                        </div>
-                        <div class="col-8 col-md-9">
-                            <div class="mb-5">
-                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> Offer 100 % Genuine Assistance</p>
-                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> It’s Faster & Reliable Execution</p>
-                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> Accurate & Expert Advice</p>
-                            </div>
-                            <div class="d-flex flex-wrap">
-                                <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
-                                    <a href="" class="position-relative wow tada" data-wow-delay=".9s">
-                                        <i class="fa fa-phone-alt text-primary fa-3x"></i>
-                                        <div class="position-absolute" style="top: 0; left: 25px;">
-                                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <span class="text-primary">Have any questions?</span>
-                                    <span class="text-secondary fw-bold fs-5" style="letter-spacing: 2px;">Free: +0123 456 7890</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="sub-title pe-3">{{__('dashboard.about_us')}}</h2>
+                    <h1 class="display-5 mb-4">{{$aboutUs['title_'.app()->getLocale()]}}</h1>
+                    <h5 class="mb-4">{{$aboutUs['message_'.app()->getLocale()]}}</h5>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
+
+{{-- من نحن وايضا الرسالة والرؤية--}}
+<!-- Message And Vision Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                <h2 class="sub-title pe-3">{{__('dashboard.massage_and_vision')}}</h2>
+                <h1 class="display-5 mb-4">{{$messageAndVision['title_'.app()->getLocale()]}}</h1>
+                <h5 class="mb-4">{{$messageAndVision['message_'.app()->getLocale()]}}</h5>
+            </div>
+            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="bg-light rounded">
+                    <img src="{{asset('storage/'.$messageAndVision->image)}}" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Message And Vision End -->
 
 {{--هنا من نخدم ونفس الكلام هذا--}}
     <!-- Counter Facts Start -->
@@ -166,7 +170,7 @@
                 </div>
                 <h1 class="display-5 mb-4">{{__('nigc.brief_projects')}}</h1>
 
-                {{--                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>--}}
+{{--                                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>--}}
 
             </div>
             <div class="row g-4">
@@ -174,7 +178,7 @@
                     <div class="service-item">
                         <div class="service-inner">
                             <div class="service-img">
-                                <img src="{{asset('website/img/service-1.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
+                                <img src="{{asset('storage/'.$ourBusinessImages->image)}}" class="img-fluid w-100 rounded" alt="Image">
                             </div>
                             <div class="service-title">
                                 <div class="service-title-name">
@@ -396,7 +400,7 @@
         <div class="container py-5">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
-                    <h5 class="sub-title text-primary px-3">CHECK OUR TRAINING</h5>
+                    <h2 class="sub-title text-primary px-3">{{__('dashboard.our_customers')}}</h2>
                 </div>
                 <h1 class="display-5 mb-4">Get the Best Coacing Service Training with Our Travisa</h1>
                 <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
