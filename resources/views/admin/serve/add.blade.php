@@ -5,7 +5,7 @@
             <div class="page-title-box">
                 <div class="row align-items-center">
                     <div class="col-md-12">
-                        <h4 class="page-title m-0" style="color: #B5A362;">{{__('dashboard.sdd_serve')}}</h4>
+                        <h4 class="page-title m-0" style="color: #B5A362;">{{__('dashboard.add_serve')}}</h4>
                     </div>
                 </div>
             </div>
