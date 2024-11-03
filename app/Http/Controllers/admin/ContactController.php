@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(Contact $contact)
     {
         $mainContent = MainContent::latest()->first();
@@ -21,17 +19,11 @@ class ContactController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.contact.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -66,25 +58,16 @@ class ContactController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Contact $contact)
     {
         return view('admin.contact.show')->with('contact' , $contact);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Contact $contact)
     {
         return view('admin.contact.edit')->with('contact' , $contact);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -104,9 +87,6 @@ class ContactController extends Controller
         return redirect()->route('admin.contact.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Contact $contact)
     {
         $contact->delete();

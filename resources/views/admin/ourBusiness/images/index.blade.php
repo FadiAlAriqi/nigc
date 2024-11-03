@@ -11,7 +11,8 @@
             </div>
             <div class="d-flex" style="margin-bottom: 10px; margin-right: 10px; margin-left: 10px;">
 {{--                <a href="{{route('admin.ourBusinessImages.create', $ourBusinessId)}}" class="btn" style="color: white; background-color: #B5A362">{{__('dashboard.add_business')}}</a>--}}
-                <a href="{{route('admin.ourBusinessImages.create', $ourBusinessId)}}" class="btn" style="color: white; background-color: #B5A362">{{__('dashboard.add_business')}}</a>
+
+                <a href="{{route('admin.ourBusinessImages.create', $ourBusinessId)}}" class="btn" style="color: white; background-color: #B5A362">{{__('dashboard.add_images')}}</a>
 
                 <a href="{{route('admin.ourBusiness.index')}}" class="btn head_back" style="color: white; background-color: #9e733b; margin-right: 20px;">{{__('dashboard.back')}}</a>
             </div>
