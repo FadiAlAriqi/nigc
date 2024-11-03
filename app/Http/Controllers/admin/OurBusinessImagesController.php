@@ -10,17 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class OurBusinessImagesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(OurBusinessImages $ourBusinessImages)
     {
         return view('admin.ourBusiness.images.index')->with('ourBusinessImages', $ourBusinessImages);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create(string $id)
     {
         $OurBusiness = OurBusiness::whereId($id)->first();
@@ -28,9 +23,6 @@ class OurBusinessImagesController extends Controller
         return view('admin.ourBusiness.images.add')->with('OurBusiness', $OurBusiness);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
 
@@ -57,9 +49,6 @@ class OurBusinessImagesController extends Controller
         return redirect()->route('admin.ourBusiness.showImages', $OurBusinessId);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         $ourBusinessImage = OurBusinessImages::whereId($id)->first();
@@ -68,9 +57,6 @@ class OurBusinessImagesController extends Controller
         return view('admin.ourBusiness.images.show',compact('ourBusinessImage', 'ourBusinessId'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         $ourBusinessImage = OurBusinessImages::whereId($id)->first();
@@ -79,9 +65,6 @@ class OurBusinessImagesController extends Controller
         return view('admin.ourBusiness.images.edit',compact('ourBusinessImage', 'ourBusinessId'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
 
@@ -113,9 +96,6 @@ class OurBusinessImagesController extends Controller
         return redirect()->route('admin.ourBusiness.showImages', $ourBusinessImageId);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $ourBusinessImage = OurBusinessImages::whereId($id)->first();
