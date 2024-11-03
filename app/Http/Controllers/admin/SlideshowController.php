@@ -10,9 +10,7 @@ use Illuminate\Http\Request;
 
 class SlideshowController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(Slideshow $slideshow)
     {
         $mainContent = MainContent::latest()->first();
@@ -22,17 +20,11 @@ class SlideshowController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.slideshow.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -49,25 +41,16 @@ class SlideshowController extends Controller
         return redirect()->route('admin.slideshow.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Slideshow $slideshow)
     {
         return view('admin.slideshow.show')->with('slideshow' , $slideshow);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Slideshow $slideshow)
     {
         return view('admin.slideshow.edit')->with('slideshow' , $slideshow);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
 //        dd($request->all());
@@ -98,9 +81,6 @@ class SlideshowController extends Controller
         return redirect()->route('admin.slideshow.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Slideshow $slideshow)
     {
         if ($slideshow->image)

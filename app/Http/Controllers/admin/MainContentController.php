@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 
 class MainContentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(MainContent $mainContent)
     {
 //        $mainContent = MainContent::latest()->first();
@@ -19,17 +17,11 @@ class MainContentController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.mainContent.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -125,25 +117,16 @@ class MainContentController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(MainContent $mainContent)
     {
         return view('admin.mainContent.show')->with('mainContent' , $mainContent);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(MainContent $mainContent)
     {
         return view('admin.mainContent.edit')->with('mainContent' , $mainContent);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -235,9 +218,6 @@ class MainContentController extends Controller
         return redirect()->route('admin.mainContent.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(MainContent $mainContent)
     {
         if ($mainContent->header_logo_ar  or $mainContent->header_logo_en or $mainContent->footer_logo_ar or $mainContent->footer_logo_en)

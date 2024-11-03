@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(Message $message)
     {
         $mainContent = MainContent::latest()->first();
@@ -21,17 +19,11 @@ class MessageController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.messages.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -51,25 +43,16 @@ class MessageController extends Controller
         return redirect()->route('admin.message.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Message $message)
     {
         return view('admin.messages.show')->with('message' , $message);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Message $message)
     {
         return view('admin.messages.edit')->with('message' , $message);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -89,9 +72,6 @@ class MessageController extends Controller
         return redirect()->route('admin.message.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Message $message)
     {
         $message->delete();

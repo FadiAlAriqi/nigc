@@ -10,9 +10,7 @@ use Illuminate\Http\Request;
 
 class ServeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(Serve $serve)
     {
         $mainContent = MainContent::latest()->first();
@@ -22,17 +20,11 @@ class ServeController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.serve.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -66,25 +58,16 @@ class ServeController extends Controller
         return redirect()->route('admin.serve.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Serve $serve)
     {
         return view('admin.serve.show')->with('serve' , $serve);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Serve $serve)
     {
         return view('admin.serve.edit')->with('serve' , $serve);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -123,9 +106,6 @@ class ServeController extends Controller
         return redirect()->route('admin.serve.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Serve $serve)
     {
         if ($serve->image)

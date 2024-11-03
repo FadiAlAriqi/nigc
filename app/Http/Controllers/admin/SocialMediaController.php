@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 
 class SocialMediaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(SocialMedia $socialMedia)
     {
         $mainContent = MainContent::latest()->first();
@@ -21,17 +19,11 @@ class SocialMediaController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.socialMedia.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -50,25 +42,16 @@ class SocialMediaController extends Controller
         return redirect()->route('admin.socialMedia.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(SocialMedia $socialMedia)
     {
         return view('admin.socialMedia.show')->with('socialMedia' , $socialMedia);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(SocialMedia $socialMedia)
     {
         return view('admin.socialMedia.edit')->with('socialMedia' , $socialMedia);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -87,9 +70,6 @@ class SocialMediaController extends Controller
         return redirect()->route('admin.socialMedia.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(SocialMedia $socialMedia)
     {
         $socialMedia->delete();

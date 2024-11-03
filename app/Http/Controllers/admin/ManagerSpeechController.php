@@ -10,9 +10,7 @@ use Illuminate\Http\Request;
 
 class ManagerSpeechController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(ManagerSpeech $managerSpeech)
     {
         $mainContent = MainContent::latest()->first();
@@ -22,17 +20,11 @@ class ManagerSpeechController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.messages.managerSpeech.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -78,25 +70,16 @@ class ManagerSpeechController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(ManagerSpeech $managerSpeech)
     {
         return view('admin.messages.managerSpeech.show')->with('managerSpeech' , $managerSpeech);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(ManagerSpeech $managerSpeech)
     {
         return view('admin.messages.managerSpeech.edit')->with('managerSpeech' , $managerSpeech);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -134,9 +117,6 @@ class ManagerSpeechController extends Controller
         return redirect()->route('admin.managerSpeech.index')->withsuccess('Operation accomplished successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(ManagerSpeech $managerSpeech)
     {
         if ($managerSpeech->image)
