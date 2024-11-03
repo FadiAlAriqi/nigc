@@ -32,5 +32,6 @@ return [
     'process_projects' => 'Process Projects',
     'our_projects' => 'Our Projects',
     'brief_projects' => 'Brief Of Our Projects',
+    'add_business_images' => 'Add Images',
 
 ];
