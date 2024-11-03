@@ -1,5 +1,6 @@
 <!-- Topbar Start -->
-<div class="container-fluid bg-primary px-5 d-none d-lg-block">
+{{--<div class="container-fluid bg-primary px-5 d-none d-lg-block">--}}
+<div class="container-fluid top_header px-5 d-none d-lg-block">
     <div class="row gx-0 align-items-center">
         <div class="col-lg-5 text-center text-lg-start mb-lg-0">
             <div class="d-flex">
