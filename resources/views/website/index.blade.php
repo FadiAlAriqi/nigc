@@ -54,7 +54,7 @@
 {{--</div>--}}
 
 
-{{-- من نحن وايضا الرسالة والرؤية--}}
+{{-- من نحن --}}
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -74,7 +74,7 @@
     </div>
     <!-- About End -->
 
-{{-- من نحن وايضا الرسالة والرؤية--}}
+{{-- الرسالة والرؤية--}}
 <!-- Message And Vision Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">

@@ -24,7 +24,7 @@
                         <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.image')}}</label>
                         <div class="col-sm-10">
                             <div>
-                                <img src="{{asset('storage/'.$slideshow->image)}}"style="border-radius: 50%; height: 130px; width: 130px" class="form-control">
+                                <img src="{{asset('storage/'.$slideshow->image)}}" style=" width:20%">
                             </div>
                         </div>
                     </div>
