@@ -9,6 +9,8 @@ use App\Models\MainContent;
 use App\Models\ManagerSpeech;
 use App\Models\Message;
 use App\Models\MessageAndVision;
+use App\Models\OurBusiness;
+use App\Models\OurBusinessImages;
 use App\Models\Serve;
 use App\Models\Service;
 use App\Models\Slideshow;
@@ -29,6 +31,8 @@ class WebSiteController extends Controller
         $managerSpeech = ManagerSpeech::latest()->first();
         $messageAndVision = MessageAndVision::latest()->first();
         $socialMedia = SocialMedia::get();
+        $ourBusiness = OurBusiness::get();
+        $ourBusinessImages = OurBusinessImages::latest()->first();
 
         return view('website.index')->with([
             'services' => $service->all(),
@@ -40,6 +44,8 @@ class WebSiteController extends Controller
             'managerSpeech' => $managerSpeech,
             'messageAndVision' => $messageAndVision,
             'socialMedia' => $socialMedia,
+            'ourBusiness' => $ourBusiness,
+            'ourBusinessImages' => $ourBusinessImages,
         ]);
     }
 

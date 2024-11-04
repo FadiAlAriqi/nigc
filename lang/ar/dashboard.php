@@ -123,5 +123,6 @@ return [
     'business_description' => 'وصف العمل',
     'note' => 'الملاحظة',
     'distributed_by' => 'مطور بواسطة',
+    'our_customers' => 'عملاؤنا',
     'A & F' => 'A & F',
 ];
