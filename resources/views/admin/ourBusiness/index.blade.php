@@ -70,14 +70,14 @@
                                                         @csrf
                                                         <button class="dropdown-item" type="submit">{{__('business.show_images')}}</button>
                                                     </form>
-
+                                                    {{route('admin.ourBusiness.show' , $our_business->id)}}
                                                     <form method="post" class="dropdown-item" action="{{route('admin.ourBusiness.destroy' , $our_business->id)}}">
                                                         @csrf
                                                         @method('delete')
                                                         <button class="dropdown-item" type="submit" onclick="return confirm('Are u sure ?')">{{__('dashboard.delete')}}</button>
                                                     </form>
 
-                                                    <form method="get" class="dropdown-item" action="{{route('admin.ourBusiness.show' , $our_business->id)}}">
+                                                    <form method="get" class="dropdown-item" action="">
                                                         @csrf
                                                         <button class="dropdown-item" type="submit">{{__('dashboard.show')}}</button>
                                                     </form>

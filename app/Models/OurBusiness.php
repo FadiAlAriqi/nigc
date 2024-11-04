@@ -18,9 +18,14 @@ class OurBusiness extends Model
         'note_en',
     ];
 
-
     public function our_business_images()
     {
         return $this->hasMany(OurBusinessImages::class);
+    }
+
+    // Relationship to get the default image
+    public function defaultImage()
+    {
+        return $this->hasOne(OurBusinessImages::class)->where('is_default', true);
     }
 }

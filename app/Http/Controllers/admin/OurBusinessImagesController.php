@@ -13,8 +13,11 @@ class OurBusinessImagesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(OurBusinessImages $ourBusinessImages)
+    public function index($businessId)
     {
+        // Fetch all images for a specific business
+        $ourBusinessImages = OurBusinessImages::where('our_business_id', $businessId)->get();
+
         return view('admin.ourBusiness.images.index')->with('ourBusinessImages', $ourBusinessImages);
     }
 
@@ -129,5 +132,21 @@ class OurBusinessImagesController extends Controller
         $ourBusinessImage->delete();
 
         return redirect()->route('admin.ourBusiness.showImages', $ourBusinessId);
+    }
+
+    public function setDefault(Request $request, $id)
+    {
+        // Find the image being set as default
+        $ourBusinessImage = OurBusinessImages::findOrFail($id);
+
+        // Unset all other images as default for this business
+        OurBusinessImages::where('our_business_id', $ourBusinessImage->our_business_id)
+            ->update(['is_default' => false]);
+
+        // Set the selected image as the default
+        $ourBusinessImage->is_default = true;
+        $ourBusinessImage->save();
+
+        return redirect()->back()->with('success', __('dashboard.default_image_set'));
     }
 }

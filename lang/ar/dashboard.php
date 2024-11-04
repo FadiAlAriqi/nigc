@@ -124,5 +124,8 @@ return [
     'note' => 'الملاحظة',
     'distributed_by' => 'مطور بواسطة',
     'our_customers' => 'عملاؤنا',
+    'default' => 'صورة الغلاف',
+    'set_default' => 'اختيار الصورة كغلاف',
+    'activate' => 'الغلاف',
     'A & F' => 'A & F',
 ];

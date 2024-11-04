@@ -60,8 +60,8 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-            <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
+            <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" style="display: none;" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+            <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" style="display: none;" >Get A Quote</a>
         </div>
     </nav>
 </div>

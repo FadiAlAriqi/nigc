@@ -3,8 +3,17 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
+use App\Models\Contact;
+use App\Models\MainContent;
+use App\Models\ManagerSpeech;
+use App\Models\MessageAndVision;
 use App\Models\OurBusiness;
 use App\Models\OurBusinessImages;
+use App\Models\Serve;
+use App\Models\Service;
+use App\Models\Slideshow;
+use App\Models\SocialMedia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -137,6 +146,35 @@ class OurBusinessController extends Controller
         return view('admin.ourBusiness.images.index')->with([
             'ourBusinessImages'=> $ourBusinessImages,
             'ourBusinessId'=> $ourBusiness,
+        ]);
+    }
+
+    public function showDetails(string $id)
+    {
+        $ourBusinesses = OurBusiness::whereId($id)->first();
+        $service = Service::get();
+        $serve = Serve::get();
+        $slideshow = Slideshow::get();
+        $mainContent = MainContent::latest()->first();
+        $contact = Contact::latest()->first();
+        $aboutUs = AboutUs::latest()->first();
+        $managerSpeech = ManagerSpeech::latest()->first();
+        $messageAndVision = MessageAndVision::latest()->first();
+        $socialMedia = SocialMedia::get();
+        $ourBusinessImages = OurBusinessImages::latest()->first();
+
+        return view('website.index')->with([
+            'services' => $service->all(),
+            'serves' => $serve->all(),
+            'slideshow' => $slideshow->all(),
+            'mainContent' => $mainContent,
+            'contact' => $contact,
+            'aboutUs' => $aboutUs,
+            'managerSpeech' => $managerSpeech,
+            'messageAndVision' => $messageAndVision,
+            'socialMedia' => $socialMedia,
+            'ourBusinesses' => $ourBusinesses,
+            'ourBusinessImages' => $ourBusinessImages,
         ]);
     }
 }

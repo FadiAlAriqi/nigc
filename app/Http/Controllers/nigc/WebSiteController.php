@@ -31,7 +31,7 @@ class WebSiteController extends Controller
         $managerSpeech = ManagerSpeech::latest()->first();
         $messageAndVision = MessageAndVision::latest()->first();
         $socialMedia = SocialMedia::get();
-        $ourBusiness = OurBusiness::get();
+        $ourBusinesses = OurBusiness::get();
         $ourBusinessImages = OurBusinessImages::latest()->first();
 
         return view('website.index')->with([
@@ -44,7 +44,7 @@ class WebSiteController extends Controller
             'managerSpeech' => $managerSpeech,
             'messageAndVision' => $messageAndVision,
             'socialMedia' => $socialMedia,
-            'ourBusiness' => $ourBusiness,
+            'ourBusinesses' => $ourBusinesses,
             'ourBusinessImages' => $ourBusinessImages,
         ]);
     }
