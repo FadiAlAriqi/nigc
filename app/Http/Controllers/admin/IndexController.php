@@ -16,16 +16,13 @@ class IndexController extends Controller
     public function index()
     {
 
-//        $mainContent = MainContent::latest()->first();
         $users = User::all();
         $services = Service::all();
         $socialMedia = SocialMedia::all();
         $slider = Slideshow::all();
         return view('admin.index')->with([
-//            'mainContent' => $mainContent,
             'users' => $users,
             'services' => $services,
-            'socialMedia' => $socialMedia,
             'slider' => $slider,
         ]);
     }

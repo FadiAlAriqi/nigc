@@ -12,11 +12,8 @@ class AboutUsController extends Controller
 
     public function index(AboutUs $aboutUs)
     {
-//        $mainContent = MainContent::latest()->first();
         return view('admin.messages.aboutUs.index')->with([
             'aboutUs' => $aboutUs->all(),
-//            'mainContent' => $mainContent,
-
         ]);
     }
 

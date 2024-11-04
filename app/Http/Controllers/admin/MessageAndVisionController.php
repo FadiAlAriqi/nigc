@@ -12,10 +12,9 @@ class MessageAndVisionController extends Controller
 
     public function index(MessageAndVision $messageAndVision)
     {
-//        $mainContent = MainContent::latest()->first();
+
         return view('admin.messages.messageAndVision.index')->with([
             'messageAndVision' => $messageAndVision->all(),
-//            'mainContent' => $mainContent,
         ]);
     }
 

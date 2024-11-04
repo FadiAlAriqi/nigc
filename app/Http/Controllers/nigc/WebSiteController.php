@@ -5,9 +5,6 @@ namespace App\Http\Controllers\nigc;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
 use App\Models\Contact;
-use App\Models\MainContent;
-use App\Models\ManagerSpeech;
-use App\Models\Message;
 use App\Models\MessageAndVision;
 use App\Models\OurBusiness;
 use App\Models\OurBusinessImages;
@@ -25,10 +22,8 @@ class WebSiteController extends Controller
         $service = Service::get();
         $serve = Serve::get();
         $slideshow = Slideshow::get();
-//        $mainContent = MainContent::latest()->first();
         $contact = Contact::latest()->first();
         $aboutUs = AboutUs::latest()->first();
-//        $managerSpeech = ManagerSpeech::latest()->first();
         $messageAndVision = MessageAndVision::latest()->first();
         $socialMedia = SocialMedia::get();
         $ourBusinesses = OurBusiness::get();
@@ -38,10 +33,8 @@ class WebSiteController extends Controller
             'services' => $service->all(),
             'serves' => $serve->all(),
             'slideshow' => $slideshow->all(),
-//            'mainContent' => $mainContent,
             'contact' => $contact,
             'aboutUs' => $aboutUs,
-//            'managerSpeech' => $managerSpeech,
             'messageAndVision' => $messageAndVision,
             'socialMedia' => $socialMedia,
             'ourBusinesses' => $ourBusinesses,
