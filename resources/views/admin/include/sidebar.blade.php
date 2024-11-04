@@ -90,13 +90,6 @@
                 </li>
 
                 <li>
-                    <a href="{{route('admin.mainContent.index')}}" class="waves-effect">
-                        <i class="dripicons-calendar"></i>
-                        <span> {{__('dashboard.main_contents')}} </span>
-                    </a>
-                </li>
-
-                <li>
                     <a href="{{route('admin.user.index')}}" class="waves-effect">
                         <i class="dripicons-calendar"></i>
                         <span> {{__('dashboard.users')}} </span>

@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\nigc\AboutUsController;
-use App\Http\Controllers\nigc\ManagerSpeechController;
 use App\Http\Controllers\nigc\MessageAndVisionController;
 use App\Http\Controllers\nigc\WebSiteController;
 use App\Http\Controllers\Auth\LoginController;
@@ -38,7 +37,6 @@ Route::middleware('web')->group(function () {
 
 //Route::resource('index' , WebSiteController::class);
 Route::resource('aboutUs' , AboutUsController::class);
-Route::resource('managerSpeech' , ManagerSpeechController::class);
 Route::resource('messageAndVision' , MessageAndVisionController::class);
 
 
