@@ -14,10 +14,7 @@
 use App\Http\Controllers\admin\AboutUsController;
 use App\Http\Controllers\admin\ContactController;
 use App\Http\Controllers\admin\indexController;
-use App\Http\Controllers\admin\MainContentController;
-use App\Http\Controllers\admin\ManagerSpeechController;
 use App\Http\Controllers\admin\MessageAndVisionController;
-use App\Http\Controllers\admin\MessageController;
 use App\Http\Controllers\admin\OurBusinessController;
 use App\Http\Controllers\admin\ServeController;
 use App\Http\Controllers\admin\ServiceController;
@@ -33,16 +30,13 @@ Route::middleware('auth')->group(function (){
 //    })->name('index');
 
     Route::resource('index' , IndexController::class);
-    Route::resource('message' , MessageController::class);
     Route::resource('aboutUs' , AboutUsController::class);
-    Route::resource('managerSpeech' , ManagerSpeechController::class);
     Route::resource('messageAndVision' , MessageAndVisionController::class);
     Route::resource('service' , ServiceController::class);
     Route::resource('serve' , ServeController::class);
     Route::resource('slideshow' , SlideshowController::class);
     Route::resource('contact' , ContactController::class);
     Route::resource('socialMedia' , SocialMediaController::class);
-    Route::resource('mainContent' , MainContentController::class);
     Route::resource('user' , UserController::class);
     Route::resource('ourBusiness' , OurBusinessController::class);
     Route::get('/ourBusiness/our_business_images/{ourBusiness}', [OurBusinessController::class, 'showImages'])->name('ourBusiness.showImages');

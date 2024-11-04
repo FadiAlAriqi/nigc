@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title_en');
             $table->longText('message_ar');
             $table->longText('message_en');
+            $table->string('image');
             $table->timestamps();
         });
     }
