@@ -1,6 +1,6 @@
 <!-- Topbar Start -->
 {{--<div class="container-fluid bg-primary px-5 d-none d-lg-block">--}}
-<div class="container-fluid top_header px-5 d-none d-lg-block">
+<div class="container-fluid top_header px-5 d-none d-lg-block d-md-block d-sm-inline-block">
     <div class="row gx-0 align-items-center">
         <div class="col-lg-5 text-center text-lg-start mb-lg-0">
             <div class="d-flex">
@@ -48,7 +48,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="#" class="nav-item nav-link active">{{__('nigc.home')}}</a>
+                <a href="" class="nav-item nav-link active">{{__('nigc.home')}}</a>
                 <a href="#" class="nav-item nav-link">{{__('nigc.our_projects')}}</a>
                 <a href="#" class="nav-item nav-link">{{__('nigc.about')}}</a>
                 <a href="#" class="nav-item nav-link">{{__('nigc.services')}}</a>
@@ -60,10 +60,9 @@
                     </div>
                 </div>
             </div>
-{{--            <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" style="display: none;" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>--}}
-{{--            <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0" style="display: none;" >Get A Quote</a>--}}
+            <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal"><i class="fas fa-search"></i></button>
+            <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-1" >Get A Quote</a>
 
-            <button class="btn btn-close-white btn-md-square border-white"></button>
         </div>
     </nav>
 </div>

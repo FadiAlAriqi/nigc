@@ -56,6 +56,8 @@
 
 {{-- من نحن --}}
     <!-- About Start -->
+
+    {{-- About Start --}}
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row g-5">
@@ -188,7 +190,7 @@
                                 <div class="p-3">
                                     <h4 class="text-primary">{{ $business->title_en }}</h4>
                                     <p class="text-muted">{{ $business->business_description_en }}</p>
-                                    <form action="{{ route('admin.ourBusiness.showDetails', $business->id) }}" method="GET">
+                                    <form action="{{ route('ourBusiness.showDetails', $business->id) }}" method="GET">
                                         @csrf
                                         <button type="submit" class="btn btn-outline-primary rounded-pill">{{ __('dashboard.details') }}</button>
                                     </form>
@@ -199,8 +201,8 @@
                 @endforeach
             </div>
             <div class="col-12 text-center mt-4">
-                <form action="{{ route('admin.ourBusiness.showAllBusinesses') }}" method="GET">
-                    @csrf <!-- CSRF token for security -->
+                <form action="{{ route('ourBusiness.showAllBusinesses') }}" method="GET">
+                    @csrf
                     <button type="submit" class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s">
                         {{ __('dashboard.show_all') }}
                     </button>
@@ -271,9 +273,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Features</a>
-                </div>
             </div>
         </div>
     </div>
@@ -287,7 +286,7 @@
         <div class="container py-5">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
-                    <h2 class="sub-title text-primary px-3">{{__('dashboard.our_customers')}}</h2>
+                    <h2 class="sub-title text-primary px-3">{{__('dashboard.our_')}}</h2>
                 </div>
                 <h1 class="display-5 mb-4">Get the Best Coacing Service Training with Our Travisa</h1>
                 <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>

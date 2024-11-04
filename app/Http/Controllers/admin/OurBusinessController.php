@@ -149,34 +149,53 @@ class OurBusinessController extends Controller
         ]);
     }
 
-    public function showDetails(string $id , $businessId)
+//    public function showDetails(string $id , $businessId)
+//    {
+//        $ourBusinesses = OurBusiness::whereId($id);
+//        $service = Service::get();
+//        $serve = Serve::get();
+//        $slideshow = Slideshow::get();
+//        $contact = Contact::latest()->first();
+//        $aboutUs = AboutUs::latest()->first();
+//        $messageAndVision = MessageAndVision::latest()->first();
+//        $socialMedia = SocialMedia::get();
+//        $ourBusinessImages = OurBusinessImages::where('our_business_id', $businessId)->get();
+//
+//        return view('website.ourBusiness.business_details.index')->with([
+//            'services' => $service->all(),
+//            'serves' => $serve->all(),
+//            'slideshow' => $slideshow->all(),
+//            'contact' => $contact,
+//            'aboutUs' => $aboutUs,
+//            'messageAndVision' => $messageAndVision,
+//            'socialMedia' => $socialMedia,
+//            'ourBusinesses' => $ourBusinesses,
+//            'ourBusinessImages' => $ourBusinessImages,
+//        ]);
+//    }
+
+    public function showDetails(string $id)
     {
-        $ourBusinesses = OurBusiness::whereId($id);
-        $service = Service::get();
-        $serve = Serve::get();
-        $slideshow = Slideshow::get();
+        $ourBusinesses = OurBusiness::findOrFail($id);
+
+        // Fetch images and other necessary data
+        $ourBusinessImages = OurBusinessImages::where('our_business_id', $id)->get();
         $contact = Contact::latest()->first();
-        $aboutUs = AboutUs::latest()->first();
-        $messageAndVision = MessageAndVision::latest()->first();
-        $socialMedia = SocialMedia::get();
-        $ourBusinessImages = OurBusinessImages::where('our_business_id', $businessId)->get();
+        $socialMedia = SocialMedia::all();
+
 
         return view('website.ourBusiness.business_details.index')->with([
-            'services' => $service->all(),
-            'serves' => $serve->all(),
-            'slideshow' => $slideshow->all(),
-            'contact' => $contact,
-            'aboutUs' => $aboutUs,
-            'messageAndVision' => $messageAndVision,
-            'socialMedia' => $socialMedia,
             'ourBusinesses' => $ourBusinesses,
             'ourBusinessImages' => $ourBusinessImages,
+            'contact' => $contact,
+            'socialMedia' => $socialMedia,
+
         ]);
     }
 
     public function showAllBusinesses()
     {
-        $ourBusinesses = OurBusiness::all();
+        $ourBusinesses = OurBusiness::get();
         $service = Service::get();
         $serve = Serve::get();
         $slideshow = Slideshow::get();
@@ -190,10 +209,8 @@ class OurBusinessController extends Controller
             'services' => $service->all(),
             'serves' => $serve->all(),
             'slideshow' => $slideshow->all(),
-//            'mainContent' => $mainContent,
             'contact' => $contact,
             'aboutUs' => $aboutUs,
-//            'managerSpeech' => $managerSpeech,
             'messageAndVision' => $messageAndVision,
             'socialMedia' => $socialMedia,
             'ourBusinesses' => $ourBusinesses,

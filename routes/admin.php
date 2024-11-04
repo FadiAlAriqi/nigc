@@ -43,8 +43,9 @@ Route::middleware('auth')->group(function (){
     Route::resource('ourBusinessImages' , OurBusinessImagesController::class)->except(['create']);
     Route::get('/ourBusinessImages/create/{id}' , [OurBusinessImagesController::class, 'create'])->name('ourBusinessImages.create');
     Route::post('/our-business-images/{id}/set-default', [OurBusinessImagesController::class, 'setDefault'])->name('ourBusinessImages.setDefault');
-    Route::get('/our-projects/{id}/show_details', [OurBusinessController::class, 'showDetails'])->name('ourBusiness.showDetails');
-    Route::get('/our-projects', [OurBusinessController::class, 'showAllBusinesses'])->name('ourBusiness.showAllBusinesses');
+//    Route::get('/our-projects/{id}/show_details', [OurBusinessController::class, 'showDetails'])->name('ourBusiness.showDetails');
+//    Route::get('/our-projects', [OurBusinessController::class, 'showAllBusinesses'])->name('ourBusiness.showAllBusinesses');
+//    Route::get('/our-projects', [OurBusinessController::class, 'showAllBusinesses'])->name('ourBusiness.showAllBusinesses');
 
 });
 
