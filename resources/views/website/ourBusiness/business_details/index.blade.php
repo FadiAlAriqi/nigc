@@ -14,6 +14,7 @@
                     </h6>
                     <h1 class="mb-4">
                         {{ app()->getLocale() === 'ar' ? $business->business_description_ar : $business->business_description_en }}
+
                     </h1>
                 </div>
             </div>
