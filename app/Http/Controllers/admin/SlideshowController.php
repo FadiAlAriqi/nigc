@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\MainContent;
 use App\Models\Service;
 use App\Models\Slideshow;
 use Illuminate\Http\Request;
@@ -13,10 +12,8 @@ class SlideshowController extends Controller
 
     public function index(Slideshow $slideshow)
     {
-        $mainContent = MainContent::latest()->first();
         return view('admin.slideshow.index')->with([
             'slideshow' => $slideshow->all(),
-            'mainContent' => $mainContent,
         ]);
     }
 

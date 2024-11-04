@@ -13,7 +13,7 @@
 
 use App\Http\Controllers\admin\AboutUsController;
 use App\Http\Controllers\admin\ContactController;
-use App\Http\Controllers\admin\indexController;
+use App\Http\Controllers\admin\IndexController;
 use App\Http\Controllers\admin\MessageAndVisionController;
 use App\Http\Controllers\admin\OurBusinessController;
 use App\Http\Controllers\admin\ServeController;

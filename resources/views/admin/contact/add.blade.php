@@ -22,7 +22,7 @@
                             <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.address_ar')}}</label>
                             <div class="col-sm-10">
 {{--                                <input name="address_ar" value="{{old('address_ar')}}" class="form-control" type="text" id="example-text-input">--}}
-                                <textarea name="address_ar" value="{{old('address_ar')}}" id="textarea" class="form-control" rows="3" placeholder="Type your message here"></textarea>
+                                <textarea name="address_ar" id="textarea" class="form-control" rows="3" placeholder="Type your message here">{{old('address_ar')}}</textarea>
                                 @error('address_ar')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
@@ -33,7 +33,7 @@
                             <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.address_en')}}</label>
                             <div class="col-sm-10">
 {{--                                <input name="address_en" value="{{old('address_en')}}" class="form-control" type="text" id="example-text-input">--}}
-                                <textarea name="address_en" value="{{old('address_en')}}" id="textarea" class="form-control" rows="3" placeholder="Type your message here"></textarea>
+                                <textarea name="address_en" id="textarea" class="form-control" rows="3" placeholder="Type your message here">{{old('address_en')}}</textarea>
                                 @error('address_en')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
