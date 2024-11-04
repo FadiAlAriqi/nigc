@@ -71,7 +71,7 @@
                         </div>
 
                         <button type="submit" class="btn bg-green text-dark save">{{__('dashboard.save')}}</button>
-                        <a href="{{route('admin.message.index')}}" class="btn bg-pink cancel">{{__('dashboard.cancel')}}</a>
+                        <a href="{{route('admin.aboutUs.index')}}" class="btn bg-pink cancel">{{__('dashboard.cancel')}}</a>
                     </form>
                 </div>
             </div>

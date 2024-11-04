@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\MainContent;
 use App\Models\Serve;
 use App\Models\Service;
 use App\Models\Slideshow;
@@ -11,19 +10,19 @@ use App\Models\SocialMedia;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class indexController extends Controller
+class IndexController extends Controller
 {
 
     public function index()
     {
 
-        $mainContent = MainContent::latest()->first();
+//        $mainContent = MainContent::latest()->first();
         $users = User::all();
         $services = Service::all();
         $socialMedia = SocialMedia::all();
         $slider = Slideshow::all();
         return view('admin.index')->with([
-            'mainContent' => $mainContent,
+//            'mainContent' => $mainContent,
             'users' => $users,
             'services' => $services,
             'socialMedia' => $socialMedia,

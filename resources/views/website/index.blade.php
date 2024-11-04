@@ -198,6 +198,14 @@
                     </div>
                 @endforeach
             </div>
+            <div class="col-12 text-center mt-4">
+                <form action="{{ route('admin.ourBusiness.showAllBusinesses') }}" method="POST">
+                    @csrf <!-- CSRF token for security -->
+                    <button type="submit" class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s">
+                        {{ __('dashboard.show_all') }}
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
     <!-- Projects End -->

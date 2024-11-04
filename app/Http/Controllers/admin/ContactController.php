@@ -12,10 +12,10 @@ class ContactController extends Controller
 
     public function index(Contact $contact)
     {
-        $mainContent = MainContent::latest()->first();
+//        $mainContent = MainContent::latest()->first();
         return view('admin.contact.index')->with([
             'contacts' => $contact->all(),
-            'mainContent' => $mainContent,
+//            'mainContent' => $mainContent,
         ]);
     }
 

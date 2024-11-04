@@ -12,10 +12,10 @@ class ServiceController extends Controller
 
     public function index(Service $service)
     {
-        $mainContent = MainContent::latest()->first();
+//        $mainContent = MainContent::latest()->first();
         return view('admin.services.index')->with([
             'services' => $service->all(),
-            'mainContent' => $mainContent,
+//            'mainContent' => $mainContent,
         ]);
     }
 

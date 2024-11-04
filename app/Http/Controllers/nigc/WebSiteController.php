@@ -25,10 +25,10 @@ class WebSiteController extends Controller
         $service = Service::get();
         $serve = Serve::get();
         $slideshow = Slideshow::get();
-        $mainContent = MainContent::latest()->first();
+//        $mainContent = MainContent::latest()->first();
         $contact = Contact::latest()->first();
         $aboutUs = AboutUs::latest()->first();
-        $managerSpeech = ManagerSpeech::latest()->first();
+//        $managerSpeech = ManagerSpeech::latest()->first();
         $messageAndVision = MessageAndVision::latest()->first();
         $socialMedia = SocialMedia::get();
         $ourBusinesses = OurBusiness::get();
@@ -38,10 +38,10 @@ class WebSiteController extends Controller
             'services' => $service->all(),
             'serves' => $serve->all(),
             'slideshow' => $slideshow->all(),
-            'mainContent' => $mainContent,
+//            'mainContent' => $mainContent,
             'contact' => $contact,
             'aboutUs' => $aboutUs,
-            'managerSpeech' => $managerSpeech,
+//            'managerSpeech' => $managerSpeech,
             'messageAndVision' => $messageAndVision,
             'socialMedia' => $socialMedia,
             'ourBusinesses' => $ourBusinesses,

@@ -13,7 +13,7 @@
 
 use App\Http\Controllers\admin\AboutUsController;
 use App\Http\Controllers\admin\ContactController;
-use App\Http\Controllers\admin\indexController;
+use App\Http\Controllers\admin\IndexController;
 use App\Http\Controllers\admin\MessageAndVisionController;
 use App\Http\Controllers\admin\OurBusinessController;
 use App\Http\Controllers\admin\ServeController;
@@ -43,7 +43,8 @@ Route::middleware('auth')->group(function (){
     Route::resource('ourBusinessImages' , OurBusinessImagesController::class)->except(['create']);
     Route::get('/ourBusinessImages/create/{id}' , [OurBusinessImagesController::class, 'create'])->name('ourBusinessImages.create');
     Route::post('/our-business-images/{id}/set-default', [OurBusinessImagesController::class, 'setDefault'])->name('ourBusinessImages.setDefault');
-    Route::post('/our-projects/{id}/show_details', [OurBusinessController::class, 'showDetails'])->name('ourBusiness.showDetails');
+    Route::get('/our-projects/{id}/show_details', [OurBusinessController::class, 'showDetails'])->name('ourBusiness.showDetails');
+    Route::get('/our-projects', [OurBusinessController::class, 'showAllBusinesses'])->name('ourBusiness.showAllBusinesses');
 
 });
 
