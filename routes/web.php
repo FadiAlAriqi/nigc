@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\admin\OurBusinessController;
 use App\Http\Controllers\nigc\AboutUsController;
 use App\Http\Controllers\nigc\MessageAndVisionController;
 use App\Http\Controllers\nigc\WebSiteController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +25,9 @@ use Illuminate\Support\Facades\Route;
 //    return view('website.index');
 //})->name('index');
 
-Route::get('/index', function () {
-    return view('website.ourBusiness.business_details.index');
-})->name('index');
+//Route::get('/index', function () {
+//    return view('website.ourBusiness.business_details.index');
+//})->name('index');
 
 Route::middleware('web')->group(function () {
 //    Route::get('/', function () {
@@ -38,6 +40,11 @@ Route::middleware('web')->group(function () {
 //Route::resource('index' , WebSiteController::class);
 Route::resource('aboutUs' , AboutUsController::class);
 Route::resource('messageAndVision' , MessageAndVisionController::class);
+
+// project details and all projects
+//Route::get('/our-business/{id}/{businessId}', [OurBusinessController::class, 'showDetails'])->name('admin.ourBusiness.showDetails');
+Route::get('/our-projects', [OurBusinessController::class, 'showAllBusinesses'])->name('ourBusiness.showAllBusinesses');
+Route::get('/our-projects/{id}/show_details', [OurBusinessController::class, 'showDetails'])->name('ourBusiness.showDetails');
 
 
 Route::get('/about', function () {

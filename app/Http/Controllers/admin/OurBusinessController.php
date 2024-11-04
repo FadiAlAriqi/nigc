@@ -93,8 +93,8 @@ class OurBusinessController extends Controller
             'business_description_ar' => ['required', 'string'],
             'business_description_en' => ['required', 'string'],
             'business_images' => ['required'],
-            'note_ar' => ['required', 'string'],
-            'note_en' => ['required', 'string'],
+            'note_ar' => ['nullable', 'string'],
+            'note_en' => ['nullable', 'string'],
         ]);
 
         DB::beginTransaction();
@@ -149,28 +149,68 @@ class OurBusinessController extends Controller
         ]);
     }
 
+//    public function showDetails(string $id , $businessId)
+//    {
+//        $ourBusinesses = OurBusiness::whereId($id);
+//        $service = Service::get();
+//        $serve = Serve::get();
+//        $slideshow = Slideshow::get();
+//        $contact = Contact::latest()->first();
+//        $aboutUs = AboutUs::latest()->first();
+//        $messageAndVision = MessageAndVision::latest()->first();
+//        $socialMedia = SocialMedia::get();
+//        $ourBusinessImages = OurBusinessImages::where('our_business_id', $businessId)->get();
+//
+//        return view('website.ourBusiness.business_details.index')->with([
+//            'services' => $service->all(),
+//            'serves' => $serve->all(),
+//            'slideshow' => $slideshow->all(),
+//            'contact' => $contact,
+//            'aboutUs' => $aboutUs,
+//            'messageAndVision' => $messageAndVision,
+//            'socialMedia' => $socialMedia,
+//            'ourBusinesses' => $ourBusinesses,
+//            'ourBusinessImages' => $ourBusinessImages,
+//        ]);
+//    }
+
     public function showDetails(string $id)
     {
-        $ourBusinesses = OurBusiness::whereId($id)->first();
+        $ourBusinesses = OurBusiness::findOrFail($id);
+
+        // Fetch images and other necessary data
+        $ourBusinessImages = OurBusinessImages::where('our_business_id', $id)->get();
+        $contact = Contact::latest()->first();
+        $socialMedia = SocialMedia::all();
+
+
+        return view('website.ourBusiness.business_details.index')->with([
+            'ourBusinesses' => $ourBusinesses,
+            'ourBusinessImages' => $ourBusinessImages,
+            'contact' => $contact,
+            'socialMedia' => $socialMedia,
+
+        ]);
+    }
+
+    public function showAllBusinesses()
+    {
+        $ourBusinesses = OurBusiness::get();
         $service = Service::get();
         $serve = Serve::get();
         $slideshow = Slideshow::get();
-        $mainContent = MainContent::latest()->first();
         $contact = Contact::latest()->first();
         $aboutUs = AboutUs::latest()->first();
-        $managerSpeech = ManagerSpeech::latest()->first();
         $messageAndVision = MessageAndVision::latest()->first();
         $socialMedia = SocialMedia::get();
         $ourBusinessImages = OurBusinessImages::latest()->first();
 
-        return view('website.index')->with([
+        return view('website.ourBusiness.index')->with([
             'services' => $service->all(),
             'serves' => $serve->all(),
             'slideshow' => $slideshow->all(),
-            'mainContent' => $mainContent,
             'contact' => $contact,
             'aboutUs' => $aboutUs,
-            'managerSpeech' => $managerSpeech,
             'messageAndVision' => $messageAndVision,
             'socialMedia' => $socialMedia,
             'ourBusinesses' => $ourBusinesses,

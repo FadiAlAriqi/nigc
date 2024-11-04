@@ -12,6 +12,7 @@ class ServeController extends Controller
 
     public function index(Serve $serve)
     {
+
         return view('admin.serve.index')->with([
             'serves' => $serve->all(),
         ]);

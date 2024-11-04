@@ -126,5 +126,6 @@ return [
     'default' => 'Cover Image',
     'set_default' => 'Set As Cover Image',
     'activate' => 'Cover',
+    'show_all' => 'Show All',
     'A & F' => 'A & F',
 ];

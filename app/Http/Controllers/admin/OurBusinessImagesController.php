@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class OurBusinessImagesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index($businessId)
     {
         // Fetch all images for a specific business

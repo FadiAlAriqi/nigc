@@ -12,6 +12,7 @@ class MessageAndVisionController extends Controller
 
     public function index(MessageAndVision $messageAndVision)
     {
+
         return view('admin.messages.messageAndVision.index')->with([
             'messageAndVision' => $messageAndVision->all(),
         ]);

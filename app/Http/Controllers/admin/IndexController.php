@@ -15,6 +15,7 @@ class IndexController extends Controller
 
     public function index()
     {
+
         $users = User::all();
         $services = Service::all();
         $socialMedia = SocialMedia::all();
