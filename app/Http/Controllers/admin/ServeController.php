@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\MainContent;
 use App\Models\Serve;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -13,10 +12,8 @@ class ServeController extends Controller
 
     public function index(Serve $serve)
     {
-        $mainContent = MainContent::latest()->first();
         return view('admin.serve.index')->with([
             'serves' => $serve->all(),
-            'mainContent' => $mainContent,
         ]);
     }
 

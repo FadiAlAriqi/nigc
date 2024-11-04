@@ -4,7 +4,6 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
-use App\Models\MainContent;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -12,10 +11,8 @@ class ContactController extends Controller
 
     public function index(Contact $contact)
     {
-        $mainContent = MainContent::latest()->first();
         return view('admin.contact.index')->with([
             'contacts' => $contact->all(),
-            'mainContent' => $mainContent,
         ]);
     }
 

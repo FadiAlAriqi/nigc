@@ -5,7 +5,6 @@ namespace App\Http\Controllers\nigc;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
 use App\Models\Contact;
-use App\Models\MainContent;
 use Illuminate\Http\Request;
 
 class AboutUsController extends Controller
@@ -16,12 +15,10 @@ class AboutUsController extends Controller
     public function index()
     {
         $aboutUs = AboutUs::latest()->first();
-        $mainContent = MainContent::latest()->first();
         $contact = Contact::latest()->first();
 
         return view('website.aboutUs')->with([
             'aboutUs' => $aboutUs,
-            'mainContent' => $mainContent,
             'contact' => $contact,
 
         ]);
