@@ -22,12 +22,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
-                            <img class="img-fluid1" src="img/portfolio-1.jpg" alt="">
+                            <img class="img-fluid1" src="{{url('storage/'.$ourBusinessImage->image)}}" alt="">
                         </div>
                         <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            <h4 class="text-white mb-4">Project Name</h4>
                             <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn btn-outline-primary m-1" href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                <a class="btn btn-outline-primary m-1" href="{{url('storage/'.$ourBusinessImage->image)}}" data-lightbox="portfolio">
                                     <i class="fa fa-eye"></i>
                                 </a>
                             </div>

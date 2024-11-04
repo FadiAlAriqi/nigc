@@ -188,8 +188,8 @@
                                 <div class="p-3">
                                     <h4 class="text-primary">{{ $business->title_en }}</h4>
                                     <p class="text-muted">{{ $business->business_description_en }}</p>
-                                    <form action="{{ route('admin.ourBusiness.showDetails', $business->id) }}" method="POST">
-                                        @csrf <!-- CSRF token for security -->
+                                    <form action="{{ route('admin.ourBusiness.showDetails', $business->id) }}" method="GET">
+                                        @csrf
                                         <button type="submit" class="btn btn-outline-primary rounded-pill">{{ __('dashboard.details') }}</button>
                                     </form>
                                 </div>
@@ -199,7 +199,7 @@
                 @endforeach
             </div>
             <div class="col-12 text-center mt-4">
-                <form action="{{ route('admin.ourBusiness.showAllBusinesses') }}" method="POST">
+                <form action="{{ route('admin.ourBusiness.showAllBusinesses') }}" method="GET">
                     @csrf <!-- CSRF token for security -->
                     <button type="submit" class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s">
                         {{ __('dashboard.show_all') }}
