@@ -24,6 +24,7 @@ class IndexController extends Controller
             'users' => $users,
             'services' => $services,
             'slider' => $slider,
+            'socialMedia' => $socialMedia,
         ]);
     }
 
