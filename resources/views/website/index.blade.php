@@ -79,15 +79,15 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="row g-5">
-            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                <h2 class="sub-title pe-3">{{__('dashboard.massage_and_vision')}}</h2>
-                <h1 class="display-5 mb-4">{{$messageAndVision['title_'.app()->getLocale()]}}</h1>
-                <h5 class="mb-4">{{$messageAndVision['message_'.app()->getLocale()]}}</h5>
-            </div>
             <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="bg-light rounded">
                     <img src="{{asset('storage/'.$messageAndVision->image)}}" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
                 </div>
+            </div>
+            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                <h2 class="sub-title pe-3">{{__('dashboard.massage_and_vision')}}</h2>
+                <h1 class="display-5 mb-4">{{$messageAndVision['title_'.app()->getLocale()]}}</h1>
+                <h5 class="mb-4">{{$messageAndVision['message_'.app()->getLocale()]}}</h5>
             </div>
         </div>
     </div>
@@ -174,150 +174,29 @@
 
             </div>
             <div class="row g-4">
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="service-inner">
+                @foreach($ourBusinesses as $business)
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item shadow-lg rounded overflow-hidden position-relative">
                             <div class="service-img">
-                                <img src="{{asset('storage/'.$ourBusinessImages->image)}}" class="img-fluid w-100 rounded" alt="Image">
+                                @if ($business->defaultImage)
+                                    <img src="{{ asset('storage/' . $business->defaultImage->image) }}" class="img-fluid w-100 fixed-size" alt="Image">
+                                @else
+                                    <img src="{{ asset('storage/default-image-path.jpg') }}" class="img-fluid w-100 fixed-size" alt="Default Image">
+                                @endif
                             </div>
-                            <div class="service-title">
-                                <div class="service-title-name">
-                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                        <a href="#" class="h4 text-white mb-0">Job Visa</a>
-                                    </div>
-                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
-                                </div>
-                                <div class="service-content pb-4">
-                                    <a href="#"><h4 class="text-white mb-4 py-3">Job Visa</h4></a>
-                                    <div class="px-4">
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum, ratione aspernatur autem velit.</p>
-                                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
-                                    </div>
+                            <div class="service-details position-absolute w-100 text-center">
+                                <div class="p-3">
+                                    <h4 class="text-primary">{{ $business->title_en }}</h4>
+                                    <p class="text-muted">{{ $business->business_description_en }}</p>
+                                    <form action="{{ route('admin.ourBusiness.showDetails', $business->id) }}" method="POST">
+                                        @csrf <!-- CSRF token for security -->
+                                        <button type="submit" class="btn btn-outline-primary rounded-pill">{{ __('dashboard.details') }}</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="service-inner">
-                            <div class="service-img">
-                                <img src="{{asset('website/img/service-2.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="service-title">
-                                <div class="service-title-name">
-                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                        <a href="#" class="h4 text-white mb-0">Business Visa</a>
-                                    </div>
-                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
-                                </div>
-                                <div class="service-content pb-4">
-                                    <a href="#"><h4 class="text-white mb-4 py-3">Business Visa</h4></a>
-                                    <div class="px-4">
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum, ratione aspernatur autem velit.</p>
-                                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="service-inner">
-                            <div class="service-img">
-                                <img src="{{asset('website/img/service-3.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="service-title">
-                                <div class="service-title-name">
-                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                        <a href="#" class="h4 text-white mb-0">Diplometic Visa</a>
-                                    </div>
-                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
-                                </div>
-                                <div class="service-content pb-4">
-                                    <a href="#"><h4 class="text-white mb-4 py-3">Diplometic Visa</h4></a>
-                                    <div class="px-4">
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum, ratione aspernatur autem velit.</p>
-                                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="service-inner">
-                            <div class="service-img">
-                                <img src="{{asset('website/img/service-1.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="service-title">
-                                <div class="service-title-name">
-                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                        <a href="#" class="h4 text-white mb-0">Students Visa</a>
-                                    </div>
-                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
-                                </div>
-                                <div class="service-content pb-4">
-                                    <a href="#"><h4 class="text-white mb-4 py-3">Students Visa</h4></a>
-                                    <div class="px-4">
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum, ratione aspernatur autem velit.</p>
-                                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="service-inner">
-                            <div class="service-img">
-                                <img src="{{asset('website/img/service-2.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="service-title">
-                                <div class="service-title-name">
-                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                        <a href="#" class="h4 text-white mb-0">Residence Visa</a>
-                                    </div>
-                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
-                                </div>
-                                <div class="service-content pb-4">
-                                    <a href="#"><h4 class="text-white mb-4 py-3">Residence Visa</h4></a>
-                                    <div class="px-4">
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum, ratione aspernatur autem velit.</p>
-                                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="service-inner">
-                            <div class="service-img">
-                                <img src="{{asset('website/img/service-3.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="service-title">
-                                <div class="service-title-name">
-                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                        <a href="#" class="h4 text-white mb-0">Tourist Visa</a>
-                                    </div>
-                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
-                                </div>
-                                <div class="service-content pb-4">
-                                    <a href="#"><h4 class="text-white mb-4 py-3">Tourist Visa</h4></a>
-                                    <div class="px-4">
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fugit dolores nesciunt adipisci obcaecati veritatis cum, ratione aspernatur autem velit.</p>
-                                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

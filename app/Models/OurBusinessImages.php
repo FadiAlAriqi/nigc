@@ -12,11 +12,17 @@ class OurBusinessImages extends Model
     protected $fillable = [
         'image',
         'our_business_id',
+        'is_default',
     ];
-
 
     public function our_business()
     {
         return $this->belongsTo(OurBusiness::class);
+    }
+
+    // Scope to get only default images
+    public function scopeDefault($query)
+    {
+        return $query->where('is_default', true);
     }
 }

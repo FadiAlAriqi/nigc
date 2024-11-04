@@ -32,6 +32,7 @@
 {{--                                <th>{{__('dashboard.title')}}</th>--}}
                                 <th>{{__('dashboard.images')}}</th>
                                 <th>{{__('dashboard.business')}}</th>
+                                <th>{{ __('dashboard.activate') }}</th>
                                 <th>{{__('dashboard.action')}}</th>
                             </tr>
                             </thead>
@@ -49,7 +50,17 @@
                                         <td>
                                             {{$ourBusinessImage->our_business['title_'.app()->getLocale()]}}
                                         </td>
+                                        <td>
+                                            <!-- Button switch to set default image -->
+                                                <form method="post" action="{{ route('admin.ourBusinessImages.setDefault', $ourBusinessImage->id) }}">
+                                                    @csrf
+                                                    <input type="hidden" name="business_id" value="{{ $ourBusinessImage->our_business_id }}">
 
+                                                    <button type="submit" class="btn btn-toggle {{ $ourBusinessImage->is_default ? 'active' : '' }}">
+                                                        {{ $ourBusinessImage->is_default ? __('dashboard.default') : __('dashboard.set_default') }}
+                                                    </button>
+                                                </form>
+                                        </td>
                                         <td>
                                             <div class="dropdown mo-mb-2">
                                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

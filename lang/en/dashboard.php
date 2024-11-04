@@ -123,5 +123,8 @@ return [
     'business_description' => 'Business Description',
     'note' => 'Note',
     'our_customers' => 'Our Customers',
+    'default' => 'Cover Image',
+    'set_default' => 'Set As Cover Image',
+    'activate' => 'Cover',
     'A & F' => 'A & F',
 ];

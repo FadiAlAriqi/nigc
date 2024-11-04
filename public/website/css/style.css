@@ -338,7 +338,7 @@
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
-    background: linear-gradient(rgba(0, 58, 102, 0.9), rgba(0, 58, 102, 0.8)), url(../img/breadcrumb.png);
+    background: linear-gradient(rgba(0, 58, 102, 0.9), rgba(0, 58, 102, 0.8)), url(../img/logo_nigc.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: initial;
@@ -441,7 +441,7 @@
 
 /*** Counter Facts Start ***/
 .counter-facts {
-    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.8)), url(../img/breadcrumb.png);
+    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.8)), url(../img/logo_nigc.svg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -905,3 +905,41 @@
     background: var(--bs-secondary) !important;
 }
 /*** copyright end ***/
+
+
+
+.fixed-size {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+}
+
+.service-item {
+    transition: transform 0.3s;
+    overflow: hidden; /* Prevent overflow of details */
+    position: relative; /* Make sure child elements can position absolute */
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-details {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.service-item:hover .service-details {
+    opacity: 1; /* Show on hover */
+    pointer-events: auto; /* Allow interaction when visible */
+}

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image');
             $table->foreignId('our_business_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->boolean('is_default')->default(false);
             $table->timestamps();
         });
     }
