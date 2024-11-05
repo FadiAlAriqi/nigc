@@ -16,9 +16,7 @@ return new class extends Migration
             $table->string('title_ar');
             $table->string('title_en');
             $table->string('number');
-            $table->string('image');
-            $table->integer('height')->default('100');
-            $table->integer('width')->default('140');
+            $table->string('icon');
             $table->timestamps();
         });
     }

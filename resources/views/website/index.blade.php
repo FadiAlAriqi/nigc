@@ -30,7 +30,7 @@
 <!-- Carousel End -->
 
     {{-- About Start --}}
-    <div class="container-fluid py-5 mt-5">
+    <div id="about_us" class="container-fluid py-5 mt-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
@@ -50,7 +50,7 @@
 
 {{-- الرسالة والرؤية--}}
 <!-- Message And Vision Start -->
-<div class="container-fluid py-5">
+<div id="message_and_vision" class="container-fluid py-5">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
@@ -68,84 +68,39 @@
 </div>
 <!-- Message And Vision End -->
 
-{{--هنا من نخدم ونفس الكلام هذا--}}
-    <!-- Counter Facts Start -->
+<!-- We Serve - Start -->
     <div class="container-fluid counter-facts py-5">
         <div class="container py-5">
             <div class="row g-4">
+                @foreach($serves as $serve)
                 <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="counter">
                         <div class="counter-icon">
-                            <i class="fas fa-passport"></i>
+                            <i class="fas fa-{{$serve->icon}}"></i>
                         </div>
                         <div class="counter-content">
-                            <h3>Visa Categories</h3>
+                            <h3>{{$serve['title_'.app()->getLocale()]}}</h3>
                             <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value" data-toggle="counter-up">31</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                <span class="counter-value" data-toggle="counter-up">{{$serve->number}}</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="counter">
-                        <div class="counter-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="counter-content">
-                            <h3>Team Members</h3>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value" data-toggle="counter-up">377</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="counter">
-                        <div class="counter-icon">
-                            <i class="fas fa-user-check"></i>
-                        </div>
-                        <div class="counter-content">
-                            <h3>Visa Process</h3>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value" data-toggle="counter-up">4.9</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">K</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="counter">
-                        <div class="counter-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <div class="counter-content">
-                            <h3>Success Rates</h3>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <span class="counter-value" data-toggle="counter-up">98</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
-    <!-- Counter Facts End -->
+<!-- We Serve - End -->
 
 {{--هنا الاعمال واذا امكن نسوي مع اضافة مشروع صورة تكون صورة الغلاف له ومن إضافة صور تكون لأجل إضافة صور أخرى --}}
     <!-- Projects Start -->
-    <div class="container-fluid service overflow-hidden pt-5">
+    <div id="our_businesses"  class="container-fluid service overflow-hidden pt-5">
         <div class="container py-5">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
                     <h1 class="sub-title text-primary px-3">{{__('nigc.our_projects')}}</h1>
                 </div>
                 <h1 class="display-5 mb-4">{{__('nigc.brief_projects')}}</h1>
-
-{{--                                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>--}}
-
             </div>
             <div class="row g-4">
                 @foreach($ourBusinesses as $business)
@@ -160,8 +115,8 @@
                             </div>
                             <div class="service-details position-absolute w-100 text-center">
                                 <div class="p-3">
-                                    <h4 class="text-primary">{{ $business->title_en }}</h4>
-                                    <p class="text-muted">{{ $business->business_description_en }}</p>
+                                    <h4 class="text-primary">{{ $business['title_'.app()->getLocale()] }}</h4>
+                                    <p class="text-muted">{{ $business['business_description_'.app()->getLocale()] }}</p>
                                     <form action="{{ route('ourBusiness.showDetails', $business->id) }}" method="GET">
                                         @csrf
                                         <button type="submit" class="btn btn-outline-primary rounded-pill">{{ __('dashboard.details') }}</button>
@@ -187,7 +142,7 @@
 
 {{--هنا عمل خدمات مع الحفاظ على التنسيق والايقونات--}}
     <!-- Features Start -->
-    <div class="container-fluid features overflow-hidden py-5">
+    <div id="why_choose_us" class="container-fluid features overflow-hidden py-5">
         <div class="container">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">

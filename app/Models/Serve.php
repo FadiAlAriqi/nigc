@@ -14,8 +14,6 @@ class Serve extends Model
         'title_ar',
         'title_en',
         'number',
-        'image',
-        'height',
-        'width',
+        'icon',
     ];
 }

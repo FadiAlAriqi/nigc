@@ -19,9 +19,9 @@ class WebSiteController extends Controller
 
     public function index()
     {
-        $service = Service::get();
-        $serve = Serve::get();
-        $slideshow = Slideshow::get();
+        $service = Service::all();
+        $serves = Serve::all();
+        $slideshow = Slideshow::all();
         $contact = Contact::latest()->first();
         $aboutUs = AboutUs::latest()->first();
         $messageAndVision = MessageAndVision::latest()->first();
@@ -30,9 +30,9 @@ class WebSiteController extends Controller
         $ourBusinessImages = OurBusinessImages::latest()->first();
 
         return view('website.index')->with([
-            'services' => $service->all(),
-            'serves' => $serve->all(),
-            'slideshow' => $slideshow->all(),
+            'services' => $service,
+            'serves' => $serves,
+            'slideshow' => $slideshow,
             'contact' => $contact,
             'aboutUs' => $aboutUs,
             'messageAndVision' => $messageAndVision,

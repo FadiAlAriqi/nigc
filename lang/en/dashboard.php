@@ -133,4 +133,5 @@ return [
     'efficiency' => 'Efficiency',
     'loyalty' => 'Loyalty',
     'A & F' => 'A & F',
+    'icon' => 'Icon',
 ];

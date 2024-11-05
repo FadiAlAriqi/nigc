@@ -41,33 +41,15 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.height')}}</label>
+                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.icon')}}</label>
                         <div class="col-sm-10">
-                            <input name="height" value="{{$serve->height}}" class="form-control" type="number" min="0" max="500" id="example-text-input" readonly>
-                            @error('height')
+                            <input name="icon" value="{{$serve->icon}}" class="form-control" type="text" id="example-text-input" readonly>
+                            @error('icon')
                             <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.width')}}</label>
-                        <div class="col-sm-10">
-                            <input name="width" value="{{$serve->width}}" class="form-control" type="number" min="0" max="500" id="example-text-input" readonly>
-                            @error('width')
-                            <span class="text-danger">{{$message}}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.image')}}</label>
-                        <div class="col-sm-10">
-                            <div>
-                                <img src="{{asset('storage/'.$serve->image)}}"style="border-radius: 50%; height: 130px; width: 130px" class="form-control">
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

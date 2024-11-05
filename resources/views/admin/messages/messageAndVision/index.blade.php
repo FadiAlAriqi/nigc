@@ -63,15 +63,15 @@
                                                     <button class="dropdown-item" type="submit">{{__('dashboard.edit')}}</button>
                                                 </form>
 
+                                                <form method="get" class="dropdown-item" action="{{route('admin.messageAndVision.show' , $messageAndVision->id)}}">
+                                                    @csrf
+                                                    <button class="dropdown-item" type="submit">{{__('dashboard.show')}}</button>
+                                                </form>
+
                                                 <form method="post" class="dropdown-item" action="{{route('admin.messageAndVision.destroy' , $messageAndVision->id)}}">
                                                     @csrf
                                                     @method('delete')
                                                     <button type="submit" class="dropdown-item" onclick="return confirm('Are u sure ?')">{{__('dashboard.delete')}}</button>
-                                                </form>
-
-                                                <form method="get" class="dropdown-item" action="{{route('admin.messageAndVision.show' , $messageAndVision->id)}}">
-                                                    @csrf
-                                                    <button class="dropdown-item" type="submit">{{__('dashboard.show')}}</button>
                                                 </form>
                                             </div>
                                         </div>
