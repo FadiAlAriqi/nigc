@@ -1,33 +1,32 @@
 @extends('website.layout.master')
 @section('content')
 
-{{--    الصور الرئيسية علشان تكون متحركة --}}
-    <!-- Carousel Start -->
-<div class="carousel-header">
-    <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-touch="true">
-        <ol class="carousel-indicators d-none d-md-flex">
-            @foreach($slideshow as $index => $slide)
-                <li data-bs-target="#carouselId" data-bs-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"></li>
-            @endforeach
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            @foreach($slideshow as $index => $slide)
-                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                    <img src="{{ asset('storage/' . $slide->image) }}" class="d-block w-100" alt="Slide {{ $index + 1 }}">
-                </div>
-            @endforeach
+<!-- Slider Start -->
+    <div class="carousel-header">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-touch="true">
+            <ol class="carousel-indicators d-none d-md-flex">
+                @foreach($slideshow as $index => $slide)
+                    <li data-bs-target="#carouselId" data-bs-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"></li>
+                @endforeach
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                @foreach($slideshow as $index => $slide)
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                        <img src="{{ asset('storage/' . $slide->image) }}" class="d-block w-100" alt="Slide {{ $index + 1 }}">
+                    </div>
+                @endforeach
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-</div>
-<!-- Carousel End -->
+<!-- Slider End -->
 
     {{-- About Start --}}
     <div id="about_us" class="container-fluid py-5 mt-5">
@@ -48,24 +47,23 @@
     </div>
     <!-- About End -->
 
-{{-- الرسالة والرؤية--}}
 <!-- Message And Vision Start -->
-<div id="message_and_vision" class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                <div class="bg-light rounded">
-                    <img src="{{asset('storage/'.$messageAndVision->image)}}" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+    <div id="message_and_vision" class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="bg-light rounded">
+                        <img src="{{asset('storage/'.$messageAndVision->image)}}" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                <h1 class="sub-title pe-3">{{__('dashboard.massage_and_vision')}}</h1>
-                <h1 class="display-5 mb-4">{{$messageAndVision['title_'.app()->getLocale()]}}</h1>
-                <h5 class="mb-4">{{$messageAndVision['message_'.app()->getLocale()]}}</h5>
+                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                    <h1 class="sub-title pe-3">{{__('dashboard.massage_and_vision')}}</h1>
+                    <h1 class="display-5 mb-4">{{$messageAndVision['title_'.app()->getLocale()]}}</h1>
+                    <h5 class="mb-4">{{$messageAndVision['message_'.app()->getLocale()]}}</h5>
+                </div>
             </div>
         </div>
     </div>
-</div>
 <!-- Message And Vision End -->
 
 <!-- We Serve - Start -->
@@ -92,7 +90,6 @@
     </div>
 <!-- We Serve - End -->
 
-{{--هنا الاعمال واذا امكن نسوي مع اضافة مشروع صورة تكون صورة الغلاف له ومن إضافة صور تكون لأجل إضافة صور أخرى --}}
     <!-- Projects Start -->
     <div id="our_businesses"  class="container-fluid service overflow-hidden pt-5">
         <div class="container py-5">
@@ -140,7 +137,6 @@
     <!-- Projects End -->
 
 
-{{--هنا عمل خدمات مع الحفاظ على التنسيق والايقونات--}}
     <!-- Features Start -->
     <div id="why_choose_us" class="container-fluid features overflow-hidden py-5">
         <div class="container">
@@ -197,7 +193,6 @@
     <!-- Features End -->
 
 
-    {{-- او هنا الخدمات مع الحفاظ على التنسيق شوف اين الافضل وسويه--}}
 
     <!-- Training Start -->
     <div class="container-fluid training overflow-hidden bg-light py-5">
@@ -229,5 +224,4 @@
         </div>
     </div>
     <!-- Training End -->
-{{--وبيانات التواصل اللي في الفوتر شوف كيف ننسقها تكون في الوسط او ايش نضيف لها علشان تظهر بشكل اجمل--}}
 @stop
