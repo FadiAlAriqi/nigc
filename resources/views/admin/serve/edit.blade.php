@@ -51,32 +51,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.image')}}</label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.icon')}}</label>
                             <div class="col-sm-10">
-                                <div class="form-control">
-                                    <input name="image" value="{{$serve->image}}" type="file" class="file">
-                                    @error('image')
-                                    <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.height')}}</label>
-                            <div class="col-sm-10">
-                                <input name="height" value="{{$serve->height}}" class="form-control" type="number" min="0" max="500" id="example-text-input" placeholder="100">
-                                @error('height')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">{{__('dashboard.width')}}</label>
-                            <div class="col-sm-10">
-                                <input name="width" value="{{$serve->width}}" class="form-control" type="number" min="0" max="500" id="example-text-input" placeholder="140">
-                                @error('width')
+                                <input name="icon" value="{{$serve->icon}}" class="form-control" type="text" id="example-text-input">
+                                @error('icon')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>

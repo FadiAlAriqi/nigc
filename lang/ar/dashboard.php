@@ -134,4 +134,5 @@ return [
     'efficiency' => 'الكفاءة',
     'loyalty' => 'الولاء',
     'A & F' => 'A & F',
+    'icon' => 'الأيقونة',
 ];

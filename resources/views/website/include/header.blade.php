@@ -49,20 +49,27 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="#" class="nav-item nav-link active">{{__('nigc.home')}}</a>
-                <a href="#" class="nav-item nav-link">{{__('nigc.our_projects')}}</a>
-                <a href="#" class="nav-item nav-link">{{__('nigc.about')}}</a>
-                <a href="#" class="nav-item nav-link">{{__('nigc.services')}}</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">{{__('nigc.language')}}</span></a>
-                    <div class="dropdown-menu m-0">
-                        <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a>
-                        <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a>
-                    </div>
+                <a href="#about_us" class="nav-item nav-link">{{__('nigc.about')}}</a>
+                <a href="#message_and_vision" class="nav-item nav-link">{{__('nigc.massage_and_vision')}}</a>
+                <a href="#our_businesses" class="nav-item nav-link">{{__('nigc.our_projects')}}</a>
+                <a href="#why_choose_us" class="nav-item nav-link">{{__('dashboard.why_choose_us')}}</a>
+{{--                <a href="#" class="nav-item nav-link">{{__('nigc.services')}}</a>--}}
+{{--                <div class="nav-item dropdown">--}}
+{{--                    <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">{{__('nigc.language')}}</span></a>--}}
+{{--                    <div class="dropdown-menu m-0">--}}
+{{--                        <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a>--}}
+{{--                        <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">{{__('nigc.language')}}</span></a>
+                <div class="dropdown-menu m-0">
+                    <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">العربية</a>
+                    <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">English</a>
                 </div>
             </div>
-            <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal"><i class="fas fa-search"></i></button>
-            <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-1" >Get A Quote</a>
-
+{{--            <button class="btn btn-close-white btn-md-square border-white"></button>--}}
         </div>
     </nav>
 </div>
