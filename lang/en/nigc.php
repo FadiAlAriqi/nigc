@@ -33,5 +33,8 @@ return [
     'our_projects' => 'Our Projects',
     'brief_projects' => 'Brief Of Our Projects',
     'add_business_images' => 'Add Images',
+    'solidity' => 'Solidity of NiGC',
+    'our_field' => 'Our Field',
+    'nigc_field' => 'NiGC Does All Construction Fields As',
 
 ];

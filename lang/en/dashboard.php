@@ -127,5 +127,10 @@ return [
     'set_default' => 'Set As Cover Image',
     'activate' => 'Cover',
     'show_all' => 'Show All',
+    'why_choose_us' => 'Why Choose Us',
+    'trust' => 'Reliability',
+    'commitment' => 'Commitment',
+    'efficiency' => 'Efficiency',
+    'loyalty' => 'Loyalty',
     'A & F' => 'A & F',
 ];

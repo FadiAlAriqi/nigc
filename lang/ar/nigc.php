@@ -33,4 +33,7 @@ return [
     'our_projects' => 'أعمالنا',
     'brief_projects' => 'نبذة عن أعمالنا',
     'add_business_images' => 'إضافة صور',
+    'solidity' => 'قوة NiGC',
+    'our_field' => 'مجالاتنا',
+    'nigc_field' => ' تنفذ NiGC جميع أعمال المقاولات العامة منها',
 ];
