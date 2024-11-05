@@ -108,7 +108,7 @@ return [
     'manager_speech' => 'Manager Speech',
     'massage_and_vision' => 'Massage and Vision',
     'contact_info' => 'Contact Information',
-    'view_site' => 'View Amd Site',
+    'view_site' => 'View Site',
     'address' => 'Address',
     'height' => 'Height',
     'width' => 'Width',

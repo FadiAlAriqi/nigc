@@ -36,7 +36,7 @@
                 <div class="card bg-primary mini-stat">
                     <div class="p-3 mini-stat-desc">
                         <div class="clearfix">
-                            <h4 class="mb-3 mt-0" style="text-align: center;">{{$services->count()}}</h4>
+                            <h4 class="mb-3 mt-0" style="text-align: center;">{{$ourBusiness->count()}}</h4>
                         </div>
                     </div>
                     <div class="p-3">

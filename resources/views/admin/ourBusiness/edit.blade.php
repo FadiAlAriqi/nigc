@@ -92,7 +92,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn bg-green text-dark save0">{{__('dashboard.save_changes')}}</button>
+                        <button type="submit" class="btn bg-info text-dark save0">{{__('dashboard.save_changes')}}</button>
                         <a href="{{route('admin.ourBusiness.index')}}" class="btn bg-pink cancel0">{{__('dashboard.cancel')}}</a>
                     </form>
                 </div>

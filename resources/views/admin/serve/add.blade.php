@@ -59,8 +59,8 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn bg-green text-dark save">{{__('dashboard.save')}}</button>
-                        <a href="{{route('admin.serve.index')}}" class="btn bg-pink cancel" id="rate-btn ">{{__('dashboard.cancel')}}</a>
+                        <button type="submit" class="btn bg-info text-dark save1">{{__('dashboard.save')}}</button>
+                        <a href="{{route('admin.serve.index')}}" class="btn bg-pink cancel1">{{__('dashboard.cancel')}}</a>
                     </form>
                 </div>
             </div>

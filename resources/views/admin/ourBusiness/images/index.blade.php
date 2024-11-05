@@ -56,7 +56,7 @@
                                                     @csrf
                                                     <input type="hidden" name="business_id" value="{{ $ourBusinessImage->our_business_id }}">
 
-                                                    <button type="submit" class="btn btn-toggle {{ $ourBusinessImage->is_default ? 'active' : '' }}">
+                                                    <button type="submit" class="btn btn-toggle {{ $ourBusinessImage->is_default ? 'active' : '' }} btn-outline-info">
                                                         {{ $ourBusinessImage->is_default ? __('dashboard.default') : __('dashboard.set_default') }}
                                                     </button>
                                                 </form>

@@ -72,7 +72,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn bg-green text-dark save">{{__('dashboard.save_changes')}}</button>
+                        <button type="submit" class="btn bg-info text-dark save0">{{__('dashboard.save_changes')}}</button>
                         <a href="{{route('admin.service.index')}}" class="btn bg-pink cancel">{{__('dashboard.cancel')}}</a>
                     </form>
                 </div>
