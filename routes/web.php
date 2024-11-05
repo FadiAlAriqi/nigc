@@ -34,7 +34,6 @@ Route::middleware('web')->group(function () {
 //        return view('website.index');
 //    });
     Route::resource('/' , WebSiteController::class);
-
 });
 
 //Route::resource('index' , WebSiteController::class);
@@ -47,9 +46,9 @@ Route::get('/our-projects', [OurBusinessController::class, 'showAllBusinesses'])
 Route::get('/our-projects/{id}/show_details', [OurBusinessController::class, 'showDetails'])->name('ourBusiness.showDetails');
 
 
-Route::get('/about', function () {
-    return view('website.about');
-})->name('about');
+//Route::get('/about', function () {
+//    return view('website.about');
+//})->name('about');
 
 //Route::get('/' ,function (){
 //    return view('admin.index');

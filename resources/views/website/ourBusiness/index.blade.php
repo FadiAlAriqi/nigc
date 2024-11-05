@@ -32,7 +32,7 @@
                                     <p class="text-secondary">
                                         {{ app()->getLocale() === 'ar' ? $business->business_description_ar : $business->business_description_en }}
                                     </p>
-                                    <form action="{{ route('admin.ourBusiness.showDetails', ['id' => $business->id, 'businessId' => $business->id]) }}" method="GET">
+                                    <form action="{{ route('ourBusiness.showDetails', ['id' => $business->id, 'businessId' => $business->id]) }}" method="GET">
                                         @csrf
                                         <button type="submit" class="btn btn-outline-secondary rounded-pill">{{ __('dashboard.details') }}</button>
                                     </form>

@@ -128,5 +128,10 @@ return [
     'set_default' => 'اختيار الصورة كغلاف',
     'activate' => 'الغلاف',
     'show_all' => 'عرض الكل',
+    'why_choose_us' => 'لماذا نحن',
+    'trust' => 'الموثوقية',
+    'commitment' => 'الإلتزام',
+    'efficiency' => 'الكفاءة',
+    'loyalty' => 'الولاء',
     'A & F' => 'A & F',
 ];

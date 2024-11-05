@@ -1,8 +1,6 @@
 @extends('website.layout.master')
 @section('content')
 
-
-
     <!-- Projects Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -40,6 +38,13 @@
                         @endif
                     </div>
                     @endforeach
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col text-center mb-4 mt-5">
+                    <h5 class="mb-4">
+                        {{ $ourBusinesses["note_".app()->getLocale()] }}
+                    </h5>
+                </div>
             </div>
         </div>
     </div>
