@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\OurBusiness;
 use App\Models\Serve;
 use App\Models\Service;
 use App\Models\Slideshow;
@@ -20,11 +21,13 @@ class IndexController extends Controller
         $services = Service::all();
         $socialMedia = SocialMedia::all();
         $slider = Slideshow::all();
+        $ourBusiness = OurBusiness::all();
         return view('admin.index')->with([
             'users' => $users,
             'services' => $services,
             'slider' => $slider,
             'socialMedia' => $socialMedia,
+            'ourBusiness' => $ourBusiness,
         ]);
     }
 

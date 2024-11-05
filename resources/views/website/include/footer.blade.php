@@ -77,13 +77,13 @@
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-md-6 text-center text-md-start mb-md-0">
-                <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>NiGC</a>, All right reserved.</span>
+                <?php echo date('Y'); ?> <span class="text-white"> &copy; <a href="#" class="border-bottom" style="color: #0E121D">NiGC</a>, All right reserved.</span>
             </div>
             <div class="col-md-6 text-center text-md-end text-white">
                 <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                 <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                 <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                <a class="border-bottom text-white" href="https://flamebases.com">Flame Bases</a>
+                <span>Devoloped by :  <a class="border-bottom text-white" href="https://flamebases.com"><span style="color: #0E121D"> Flame Base</span></a> Team</span>
             </div>
         </div>
     </div>

@@ -28,7 +28,7 @@
                                 <th>{{__('dashboard.title')}}</th>
                                 <th>{{__('dashboard.business_description')}}</th>
                                 <th>{{__('dashboard.note')}}</th>
-{{--                                <th>{{__('dashboard.action')}}</th>--}}
+                                <th>{{__('dashboard.action')}}</th>
                             </tr>
                             </thead>
                             <tbody>
