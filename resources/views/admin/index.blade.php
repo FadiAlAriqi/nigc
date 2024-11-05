@@ -18,7 +18,7 @@
         </div>
         <!-- end page title -->
 
-                <div class="row">
+        <div class="row">
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-primary mini-stat">
                     <div class="p-3 mini-stat-desc">
@@ -26,8 +26,8 @@
                             <h4 class="mb-3 mt-0" style="text-align: center;">{{$users->count()}}</h4>
                         </div>
                     </div>
-                    <div class="p-3">
-                        <p class="font-14 m-0 text-dark" style="text-align: center;">{{__('dashboard.users')}}</p>
+                    <div class="p-3" style="border: solid 1px #B5A362">
+                        <p class="font-14 m-0" style="text-align: center; color: #F6A76B; font-size: 18px;">{{__('dashboard.users')}}</p>
                     </div>
                 </div>
             </div>
@@ -39,8 +39,8 @@
                             <h4 class="mb-3 mt-0" style="text-align: center;">{{$ourBusiness->count()}}</h4>
                         </div>
                     </div>
-                    <div class="p-3">
-                        <p class="font-14 m-0 text-dark" style="text-align: center;">{{__('dashboard.services')}}</p>
+                    <div class="p-3" style="border: solid 1px #B5A362">
+                        <p class="font-14 m-0" style="text-align: center; color: #F6A76B; font-size: 18px;">{{__('dashboard.services')}}</p>
                     </div>
                 </div>
             </div>
@@ -52,8 +52,8 @@
                             <h4 class="mb-3 mt-0" style="text-align: center;">{{$socialMedia->count()}}</h4>
                         </div>
                     </div>
-                    <div class="p-3">
-                        <p class="font-14 m-0 text-dark" style="text-align: center;">{{__('dashboard.social_media')}}</p>
+                    <div class="p-3" style="border: solid 1px #B5A362">
+                        <p class="font-14 m-0" style="text-align: center; color: #F6A76B; font-size: 18px;">{{__('dashboard.social_media')}}</p>
                     </div>
                 </div>
             </div>
@@ -65,8 +65,8 @@
                             <h4 class="mb-3 mt-0" style="text-align: center;">{{$slider->count()}}</h4>
                         </div>
                     </div>
-                    <div class="p-3">
-                        <p class="font-14 m-0 text-dark" style="text-align: center;">{{__('dashboard.slideshow')}}</p>
+                    <div class="p-3" style="border: solid 1px #B5A362">
+                        <p class="font-14 m-0" style="text-align: center; color: #F6A76B; font-size: 18px;">{{__('dashboard.slideshow')}}</p>
                     </div>
                 </div>
             </div>
