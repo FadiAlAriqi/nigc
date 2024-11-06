@@ -72,17 +72,17 @@ Route::get('/our-projects/{id}/show_details', [OurBusinessController::class, 'sh
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/admin/dashboard/aykhmnasa2024/v1.0/byflamebases/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/login' , function (){
+Route::get('/admin/dashboard/aykhmnasa2024/v1.0/byflamebases/login' , function (){
     return view('auth.login');
 })->name('login');
 
 
 
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('admin/dashboard/aykhmnasa2024/v1.0/byflamebases/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('admin/dashboard/aykhmnasa2024/v1.0/byflamebases/login', [LoginController::class, 'login']);
+Route::post('admin/dashboard/aykhmnasa2024/v1.0/byflamebases/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [RegisterController::class, 'register']);
+Route::get('admin/dashboard/aykhmnasa2024/v1.0/byflamebases/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('admin/dashboard/aykhmnasa2024/v1.0/byflamebases/register', [RegisterController::class, 'register']);

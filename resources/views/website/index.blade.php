@@ -224,4 +224,26 @@
         </div>
     </div>
     <!-- Training End -->
+
+{{--    script for reload--}}
+<script>
+    // Redirect function
+    function redirectToMainPage() {
+        window.location.href = "{{ route('index') }}"; // Redirect to the main page using the named route
+    }
+
+    // Handle custom reload button click
+    function handleReloadClick() {
+        redirectToMainPage();
+    }
+
+    // Handle keydown events for F5 and Ctrl+R (or Cmd+R)
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'F5' || (event.ctrlKey && event.key === 'r') || (event.metaKey && event.key === 'r')) {
+            event.preventDefault(); // Prevent default reload behavior
+            redirectToMainPage(); // Redirect to the main page
+        }
+    });
+</script>
+
 @stop

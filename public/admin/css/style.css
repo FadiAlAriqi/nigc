@@ -162,13 +162,13 @@ code {
 }
 
 .dropdown-item {
-  color: #E2B461;
+  color: #707070;
   padding: 6px 16px;
   font-size: 15px;
 }
 
 .dropdown-item:focus, .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover {
-  background-color: #E2B461;
+  background-color: #707070;
   color: #eff3f6;
 }
 
@@ -1100,7 +1100,7 @@ body.fixed-left .side-menu.left {
 
 
 #sidebar-menu ul ul a {
-    color: #E2B461;
+    color: #707070;
 
 }#sidebar-menu ul ul a:hover {
     color: #E3731D;
@@ -1119,7 +1119,7 @@ body.fixed-left .side-menu.left {
 }
 
 #sidebar-menu > ul > li > a {
-  color: #E2B461;
+  color: #707070;
   display: block;
   padding: 14px 25px;
   font-size: 15.5px;
@@ -2617,7 +2617,7 @@ label {
 
 .table-hover tbody tr:hover, .table-striped tbody tr:nth-of-type(odd),
 .thead-default th {
-  background-color: #E2B461;
+  background-color: #707070;
 }
 
 .table th {

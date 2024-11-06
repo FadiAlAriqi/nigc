@@ -9,7 +9,6 @@
                     <a href=""><i class="fa fa-map-marker-alt me-2"></i>{{$contact['address_'.app()->getLocale()]}}</a>
                     <a href="mailto:{{$contact->email}}"><i class="fas fa-envelope me-2"></i> {{$contact->email}}</a>
                     <a href="tel:{{$contact->phone}}"><i class="fas fa-phone me-2"></i> {{$contact->phone}}</a>
-{{--                    <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>--}}
                     <div class="d-flex align-items-center">
                         <i class="fas fa-share fa-2x text-secondary me-2"></i>
 
@@ -52,7 +51,8 @@
 
             <div class="col-md-6 col-lg-6 col-xl-6">
                 <div class="footer-item" style="text-align: center">
-                    <h1 class="display-5 text-secondary m-0"><img src="{{asset('admin/images/logo_nigc.svg')}}" class="img-fluid" alt="Logo">{{__('nigc.name')}}</h1>
+                    <img src="{{asset('admin/images/logo.png')}}" class="img-fluid" alt="Logo">
+                    <h2 class="display-5 text-secondary m-0">{{__('nigc.company_name')}}</h2>
                 </div>
             </div>
 
