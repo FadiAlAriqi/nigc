@@ -48,11 +48,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="#home" class="nav-item nav-link active">{{__('nigc.home')}}</a>
-                <a href="#about_us" class="nav-item nav-link">{{__('nigc.about')}}</a>
-                <a href="#message_and_vision" class="nav-item nav-link">{{__('nigc.massage_and_vision')}}</a>
-                <a href="#our_businesses" class="nav-item nav-link">{{__('nigc.our_projects')}}</a>
-                <a href="#why_choose_us" class="nav-item nav-link">{{__('dashboard.why_choose_us')}}</a>
+                <a href="{{route('index')}}" class="nav-item nav-link active">{{__('nigc.home')}}</a>
+                <a href="{{route('index')}}#about_us" class="nav-item nav-link">{{__('nigc.about')}}</a>
+                <a href="{{route('index')}}#message_and_vision" class="nav-item nav-link">{{__('nigc.massage_and_vision')}}</a>
+                <a href="{{route('index')}}#our_businesses" class="nav-item nav-link">{{__('nigc.our_projects')}}</a>
+                <a href="{{route('index')}}#why_choose_us" class="nav-item nav-link">{{__('dashboard.why_choose_us')}}</a>
 {{--                <a href="#" class="nav-item nav-link">{{__('nigc.services')}}</a>--}}
 {{--                <div class="nav-item dropdown">--}}
 {{--                    <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">{{__('nigc.language')}}</span></a>--}}
@@ -75,13 +75,44 @@
 </div>
 <!-- Navbar & Hero End -->
 
+{{--<script>--}}
+{{--    document.addEventListener("DOMContentLoaded", function() {--}}
+{{--        const navLinks = document.querySelectorAll('.nav-item.nav-link');--}}
+{{--        const currentHash = window.location.hash;--}}
+
+{{--        navLinks.forEach(link => {--}}
+{{--            // تحقق مما إذا كان href يحتوي على hash--}}
+{{--            const linkHash = link.getAttribute('href');--}}
+
+{{--            if (linkHash === currentHash) {--}}
+{{--                link.classList.add('active');--}}
+{{--            } else {--}}
+{{--                link.classList.remove('active');--}}
+{{--            }--}}
+{{--        });--}}
+
+{{--        // إضافة حدث لتحديث الحالة عند تغيير الـ hash--}}
+{{--        window.addEventListener('hashchange', function() {--}}
+{{--            const newHash = window.location.hash;--}}
+{{--            navLinks.forEach(link => {--}}
+{{--                const linkHash = link.getAttribute('href');--}}
+
+{{--                if (linkHash === newHash) {--}}
+{{--                    link.classList.add('active');--}}
+{{--                } else {--}}
+{{--                    link.classList.remove('active');--}}
+{{--                }--}}
+{{--            });--}}
+{{--        });--}}
+{{--    });--}}
+{{--</script>--}}
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const navLinks = document.querySelectorAll('.nav-item.nav-link');
-        const currentHash = window.location.hash;
+        const currentHash = window.location.hash || '#home'; // تعيين القيمة الافتراضية لـ #home
 
         navLinks.forEach(link => {
-            // تحقق مما إذا كان href يحتوي على hash
             const linkHash = link.getAttribute('href');
 
             if (linkHash === currentHash) {

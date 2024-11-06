@@ -26,7 +26,7 @@ class WebSiteController extends Controller
         $aboutUs = AboutUs::latest()->first();
         $messageAndVision = MessageAndVision::latest()->first();
         $socialMedia = SocialMedia::get();
-        $ourBusinesses = OurBusiness::get();
+        $ourBusinesses = OurBusiness::orderByDesc('id')->latest()->take(3)->get();
         $ourBusinessImages = OurBusinessImages::latest()->first();
 
         return view('website.index')->with([
