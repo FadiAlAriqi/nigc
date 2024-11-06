@@ -17,9 +17,6 @@
         </div>
         <div class="col-lg-4 text-center text-lg-end">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
-{{--                <a href="#" class="text-muted me-2"> Help</a><small> / </small>--}}
-{{--                <a href="#" class="text-muted mx-2"> Support</a><small> / </small>--}}
-{{--                <a href="#" class="text-muted ms-2"> Contact</a>--}}
                 <a class="nav-item nav-link">
                     @if (app()->getLocale() == 'ar')
                         <a class="text-muted me-2"

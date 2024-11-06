@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function (){
 //        return view('admin.index');
 //    })->name('index');
 
+
     Route::resource('index' , IndexController::class);
     Route::resource('aboutUs' , AboutUsController::class);
     Route::resource('messageAndVision' , MessageAndVisionController::class);
