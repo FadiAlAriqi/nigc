@@ -72,9 +72,9 @@ Route::get('/our-projects/{id}/show_details', [OurBusinessController::class, 'sh
 
 Auth::routes(['verify' => true]);
 
-Route::get('/admin/dashboard/aykhmnasa2024/v1.0/byflamebases/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/admin/dashboard/aykhmnasa2024/v1.0/byflamebases/login' , function (){
+Route::get('/login' , function (){
     return view('auth.login');
 })->name('login');
 

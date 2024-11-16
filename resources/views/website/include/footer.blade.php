@@ -80,9 +80,6 @@
                 <?php echo date('Y'); ?> <span class="text-white"> &copy; <a href="#" class="border-bottom" style="color: #0E121D">NiGC</a>, All right reserved.</span>
             </div>
             <div class="col-md-6 text-center text-md-end text-white">
-                <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
                 <span>Devoloped by :  <a class="border-bottom text-white" href="https://flamebases.com" target="_blank"><span style="color: #0E121D"> Flame Base</span></a> Team</span>
             </div>
         </div>
