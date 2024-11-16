@@ -35,11 +35,13 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->prefix(LaravelLocalization::setLocale() . '/')
+//                ->prefix( '/')
                 ->group(base_path('routes/web.php'));
         });
 
         Route::middleware('web')
             ->prefix(LaravelLocalization::setLocale() . '/admin')
+//            ->prefix( '/admin')
             ->name('admin.')
             ->group(base_path('routes/admin.php'));
     }
